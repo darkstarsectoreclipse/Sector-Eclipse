@@ -1,16 +1,12 @@
-<p align="center"> <img alt="Sector Umbra Logo" height="150" src="https://raw.githubusercontent.com/Sector-Umbra/Sector-Umbra/refs/heads/master/Resources/Textures/Logo/logo.png" /></p>
-
-Sector Umbra is a fork of Space Station 14, a remake of SS13 that runs on [Robust Toolbox](https://github.com/space-wizards/RobustToolbox).
-
-This is the primary repository for Sector Umbra, other related repositories are hosted under the Sector-Umbra github organisation account.
+Sector Eclipse is a fork of Space Station 14, a remake of SS13 that runs on [Robust Toolbox](https://github.com/space-wizards/RobustToolbox)
 
 ## Links
 
-[Website](https://sector-umbra.net/) | [Wiki](https://wiki.sector-umbra.net/) | [Latest Builds](https://sector-umbra.net/cdn/fork/sectorumbra/)
+Nothing for now !
 
 ## Contributing
 
-We are happy to accept contributions from anybody and our existing contributors are eager to help where necessary!
+We are happy to accept any contributions and suggestions from the community or abroad !
 
 ## Building
 
@@ -23,6 +19,8 @@ We are happy to accept contributions from anybody and our existing contributors 
 [More detailed instructions on building the project.](https://docs.spacestation14.com/en/general-development/setup.html)
 
 ## License
+
+Note : on this part a discussion will be held with Umbra peoples as i am unclear about license application. I am fairly certain that MIT allow us at least to create this fork.
 
 All code for the content repository is licensed under [MIT](https://github.com/Sector-Umbra/Sector-Umbra/blob/master/LICENSE.TXT). The license owner is either Space Wizards Federation or Sector Umbra or another organisation depending on where the code originally came from. All pull requests made to this repository will include explicit mentions of the license owner as of 2024-11-22. If no license owner is mentioned, Sector Umbra is implied.
 
