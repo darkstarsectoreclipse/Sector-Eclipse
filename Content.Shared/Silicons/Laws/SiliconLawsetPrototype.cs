@@ -10,6 +10,12 @@ namespace Content.Shared.Silicons.Laws;
 public sealed partial class SiliconLawset
 {
     /// <summary>
+    /// The name of this lawset
+    /// </summary>
+    [DataField(required: false), ViewVariables(VVAccess.ReadWrite)]
+    public string Name = string.Empty;
+
+    /// <summary>
     /// List of laws in this lawset.
     /// </summary>
     [DataField(required: true), ViewVariables(VVAccess.ReadWrite)]
@@ -49,8 +55,9 @@ public sealed partial class SiliconLawset
 
         return new SiliconLawset()
         {
+            Name = Name,
             Laws = laws,
-            ObeysTo = ObeysTo
+            ObeysTo = ObeysTo,
         };
     }
 }
@@ -65,6 +72,12 @@ public sealed partial class SiliconLawsetPrototype : IPrototype
     /// <inheritdoc/>
     [IdDataField]
     public string ID { get; private set; } = default!;
+
+    /// <summary>
+    /// The name of this lawset
+    /// </summary>
+    [DataField(required: false), ViewVariables(VVAccess.ReadWrite)]
+    public string Name = string.Empty;
 
     /// <summary>
     /// List of law prototype ids in this lawset.
