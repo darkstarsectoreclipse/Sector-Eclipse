@@ -181,7 +181,7 @@
   suffix: Empty
   components:
   - type: Anchorable
-    flags: 
+    flags:
     - Anchorable
   - type: Rotatable
   - type: WarpPoint
@@ -270,6 +270,7 @@
     laws: Crewsimov
   - type: SiliconLawBound
   - type: IonStormTarget # CD change
+    chance: 0.2 # AI is less likely to be affected by Ion Storm than other silicons (default : 0.8)
   - type: ActionGrant
     actions:
     - ActionViewLaws
