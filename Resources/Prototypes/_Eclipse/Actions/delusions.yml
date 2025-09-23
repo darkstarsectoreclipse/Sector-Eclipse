@@ -1,0 +1,14 @@
+- type: entity
+  parent: BaseMentalAction # allow reading delusions when crit
+  id: ActionViewDelusions
+  name: View Delusions
+  description: View your absolute beliefs.
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+    icon:
+      sprite: _Eclipse/Interface/Actions/view_delusions.rsi
+      state: scream
+    useDelay: 0.5
+  - type: InstantAction
+    event: !type:ToggleDelusionsScreenEvent

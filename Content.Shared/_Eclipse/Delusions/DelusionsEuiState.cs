@@ -4,12 +4,12 @@ using Robust.Shared.Serialization;
 namespace Content.Shared._Eclipse.Delusions;
 
 [Serializable, NetSerializable]
-public sealed class DelusionsEuiState : EuiStateBase
+public sealed class DelusionsEditEuiState : EuiStateBase
 {
     public List<Delusion> Delusions { get; }
     public NetEntity Target { get; }
 
-    public DelusionsEuiState(List<Delusion> delusions, NetEntity target)
+    public DelusionsEditEuiState(List<Delusion> delusions, NetEntity target)
     {
         Delusions = delusions;
         Target = target;

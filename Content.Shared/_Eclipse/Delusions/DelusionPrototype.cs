@@ -9,41 +9,33 @@ namespace Content.Shared._Eclipse.Delusions;
 public partial class Delusion
 {
     /// <summary>
-    /// The prototype this delusion was created from.
-    /// Does not apply to admin-made delusions.
-    /// </summary>
-    [DataField]
-    public ProtoId<DelusionPrototype>? ProtoId;
-
-    /// <summary>
     /// A locale string of the delusion name.
     /// </summary>
     [DataField(required: true)]
-    public LocId DelusionName;
+    public LocId Name;
 
     /// <summary>
     /// A locale string of the delusion description.
     /// </summary>
     [DataField(required: true)]
-    public LocId DelusionDesc;
+    public LocId Description;
 
     public string GetLocName()
     {
-        return Loc.GetString(DelusionName);
+        return Loc.GetString(Name);
     }
 
     public string GetLocDesc()
     {
-        return Loc.GetString(DelusionDesc);
+        return Loc.GetString(Description);
     }
 
     public Delusion ShallowClone()
     {
         return new Delusion()
         {
-            ProtoId = ProtoId,
-            DelusionName = DelusionName,
-            DelusionDesc = DelusionDesc
+            Name = Name,
+            Description = Description,
         };
     }
 }
@@ -54,9 +46,4 @@ public sealed partial class DelusionPrototype : Delusion, IPrototype
 {
     [IdDataField]
     public string ID { get; private set; } = default!;
-
-    public DelusionPrototype()
-    {
-        ProtoId = ID;
-    }
 }

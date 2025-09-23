@@ -1,8 +1,5 @@
-delusion-default-name = Normal
-delusion-default-desc = You do not suffer from any delusions.
-
-delusion-killer-name = Assassin
-delusion-killer-desc = Someone is trying to kill you. It could be anyone.
+delusion-killer-name = Perfidious Assassin
+delusion-killer-desc = Someone on the station is trying to kill you. It could be anyone.
 
 delusion-conspiracy-name = Global Conspiracy
 delusion-conspiracy-desc = Everyone is conspiring against you and every conversation is in reality about you.
@@ -50,7 +47,7 @@ delusion-benefactor-name = Ultimate Benefactor
 delusion-benefactor-desc = You are personally responsible for the well being of everyone aboard the station.
 
 delusion-poison-name = Mass Medicine Sabotage
-delusion-poison-desc = All medecine on board are laced with a slow acting lethal poison.
+delusion-poison-desc = All medecine on station is laced with a slow acting lethal poison.
 
 delusion-fashionista-name = Fashionista
 delusion-fashionista-desc = You must always be the most fashionable person aboard.

@@ -29,7 +29,7 @@ public sealed class DelusionsEui : BaseEui
 
     public override void HandleState(EuiStateBase state)
     {
-        if (state is not DelusionsEuiState s)
+        if (state is not DelusionsEditEuiState s)
             return;
 
         _target = s.Target;

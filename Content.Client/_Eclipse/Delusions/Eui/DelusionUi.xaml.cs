@@ -43,8 +43,8 @@ public sealed partial class DelusionUi : FancyWindow
 
             var delusion = new Delusion()
             {
-                DelusionName = title,
-                DelusionDesc = text,
+                Name = title,
+                Description = text,
             };
 
             newDelusions.Add(delusion);

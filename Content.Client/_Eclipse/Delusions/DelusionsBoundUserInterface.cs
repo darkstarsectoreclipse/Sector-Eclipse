@@ -1,4 +1,5 @@
 using Content.Shared._Eclipse.Delusions;
+using Content.Shared._Eclipse.Delusions.Components;
 using JetBrains.Annotations;
 using Robust.Client.UserInterface;
 
@@ -26,10 +27,10 @@ public sealed class DelusionsBoundUserInterface : BoundUserInterface
     {
         base.UpdateState(state);
 
-        if (state is not DelusionsBuiState msg)
+        if (state is not DelusionalBuiState msg)
             return;
 
-        if (!_entityManager.TryGetComponent<DelusionsComponent>(Owner, out var component))
+        if (!_entityManager.TryGetComponent<DelusionalComponent>(Owner, out var component))
             return;
 
         _menu?.Update(component, msg);
