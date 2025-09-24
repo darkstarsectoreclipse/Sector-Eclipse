@@ -1,4 +1,3 @@
-using Content.Shared._Eclipse.Delusions;
 using Content.Shared._Eclipse.Delusions.Components;
 using JetBrains.Annotations;
 using Robust.Client.UserInterface;

@@ -5,18 +5,23 @@ using Robust.Server.GameObjects;
 using Content.Shared._Eclipse.Delusions;
 using Content.Shared._Eclipse.Delusions.Components;
 using Content.Shared.Chat;
+using NetCord;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
+
+// Debug stuff to remove
+
+// End of this
 
 namespace Content.Server._Eclipse.Delusions;
 
 public sealed class DelusionalSystem : SharedDelusionalSystem
 {
     [Dependency] private readonly UserInterfaceSystem _bui = default!;
-    [Dependency] private readonly ActionsSystem _actions = default!;    // Server
-    [Dependency] private readonly IChatManager _chatManager = default!; // Server
-    [Dependency] private readonly SharedAudioSystem _audio = default!;  //
+    [Dependency] private readonly ActionsSystem _actions = default!;
+    [Dependency] private readonly IChatManager _chatManager = default!;
+    [Dependency] private readonly SharedAudioSystem _audio = default!;
 
     private readonly EntProtoId _actionViewDelusions = "ActionViewDelusions";
 
@@ -36,29 +41,24 @@ public sealed class DelusionalSystem : SharedDelusionalSystem
         if (args.Handled || !TryComp<ActorComponent>(ent, out var actor))
             return;
         args.Handled = true;
-        _bui.TryToggleUi(ent.Owner, DelusionsUiKey.Key, actor.PlayerSession);
+
+        var msg = _bui.PrintFailurePoint(ent.Owner, DelusionsUiKey.Key, actor.PlayerSession);
+
+
+        // interface does not contain the key...
+        if (_bui.TryToggleUi(ent.Owner, DelusionsUiKey.Key, actor.PlayerSession))
+            return;
+
+        var wrappedMessage = Loc.GetString("chat-manager-server-wrap-message", ("message", msg));
+        _chatManager.ChatMessageToOne(ChatChannel.Server, msg, wrappedMessage, default, false, actor.PlayerSession.Channel, colorOverride:Robust.Shared.Maths.Color.Purple);
+
+
     }
 
     private void OnBoundUIOpened(Entity<DelusionalComponent> ent, ref BoundUIOpenedEvent args)
     {
         var state = new DelusionalBuiState(ent.Comp.Delusions);
         _bui.SetUiState(args.Entity, DelusionsUiKey.Key, state);
-    }
-
-    private void OnDelusionsShutdown(Entity<DelusionalComponent> ent, ref ComponentShutdown args)
-    {
-        var target = ent.Comp;
-
-        if (!TryComp<ActorComponent>(ent, out var actor))
-            return;
-
-        var session = actor.PlayerSession;
-        _audio.PlayGlobal(target.DelusionsUpdateSound, session);
-
-        var msg = Loc.GetString("delusions-update-notify");
-        var wrappedMessage = Loc.GetString("chat-manager-server-wrap-message", ("message", msg));
-        _chatManager.ChatMessageToOne(ChatChannel.Server, msg, wrappedMessage, default, false, session.Channel, colorOverride:Color.Purple);
-        UpdateBuiState(ent);
     }
 
     /// <summary>
@@ -77,8 +77,24 @@ public sealed class DelusionalSystem : SharedDelusionalSystem
     /// <param name="ent"></param>
     public void RemoveDelusions(Entity<DelusionalComponent> ent)
     {
-        NotifyDelusionsEnded(ent);
         RemComp<DelusionalComponent>(ent);
+    }
+
+    public void NotifyDelusionsStarted(Entity<DelusionalComponent> ent)
+    {
+        var target = ent.Comp;
+
+        if (!TryComp<ActorComponent>(ent, out var actor))
+            return;
+
+        var session = actor.PlayerSession;
+        _audio.PlayGlobal(target.DelusionsUpdateSound, session);
+
+        var msg = Loc.GetString("delusions-start-notify") + '\n' + Loc.GetString("delusions-explain");
+        var wrappedMessage = Loc.GetString("chat-manager-server-wrap-message", ("message", msg));
+        _chatManager.ChatMessageToOne(ChatChannel.Server, msg, wrappedMessage, default, false, session.Channel, colorOverride:Robust.Shared.Maths.Color.Purple);
+
+        UpdateBuiState(ent);
     }
 
     public void NotifyDelusionsChanged(Entity<DelusionalComponent> ent)
@@ -93,7 +109,7 @@ public sealed class DelusionalSystem : SharedDelusionalSystem
 
         var msg = Loc.GetString("delusions-update-notify");
         var wrappedMessage = Loc.GetString("chat-manager-server-wrap-message", ("message", msg));
-        _chatManager.ChatMessageToOne(ChatChannel.Server, msg, wrappedMessage, default, false, session.Channel, colorOverride:Color.Purple);
+        _chatManager.ChatMessageToOne(ChatChannel.Server, msg, wrappedMessage, default, false, session.Channel, colorOverride:Robust.Shared.Maths.Color.Purple);
         UpdateBuiState(ent);
     }
 
@@ -105,9 +121,9 @@ public sealed class DelusionalSystem : SharedDelusionalSystem
         var session = actor.PlayerSession;
         _audio.PlayGlobal(ent.Comp.DelusionsUpdateSound, session);
 
-        var msg = Loc.GetString("delusions-update-notify");
+        var msg = Loc.GetString("delusions-end-notify");
         var wrappedMessage = Loc.GetString("chat-manager-server-wrap-message", ("message", msg));
-        _chatManager.ChatMessageToOne(ChatChannel.Server, msg, wrappedMessage, default, false, session.Channel, colorOverride:Color.Purple);
+        _chatManager.ChatMessageToOne(ChatChannel.Server, msg, wrappedMessage, default, false, session.Channel, colorOverride:Robust.Shared.Maths.Color.Purple);
     }
 
     private void UpdateBuiState(Entity<DelusionalComponent> ent)
@@ -128,13 +144,20 @@ public sealed class DelusionalSystem : SharedDelusionalSystem
 
     private void OnDelusionalInit(Entity<DelusionalComponent> ent, ref MapInitEvent args)
     {
-        NotifyDelusionsChanged(ent);
+        NotifyDelusionsStarted(ent);
 
         ent.Comp.Action = _actions.AddAction(ent.Owner, _actionViewDelusions);
+
+        if (! TryComp<UserInterfaceComponent>(ent, out var userInterface))
+            return;
+
+        _bui.SetUi((ent, userInterface), DelusionsUiKey.Key, new InterfaceData("DelusionsBoundUserInterface"));
     }
 
     private void OnDelusionalShutdown(Entity<DelusionalComponent> ent, ref ComponentShutdown args)
     {
+        NotifyDelusionsEnded(ent);
+
         _actions.RemoveAction(ent.Owner, ent.Comp.Action);
     }
 }

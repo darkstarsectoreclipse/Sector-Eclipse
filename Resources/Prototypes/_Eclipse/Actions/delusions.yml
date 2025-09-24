@@ -7,8 +7,12 @@
   - type: Action
     itemIconStyle: NoItem
     icon:
-      sprite: _Eclipse/Interface/Actions/view_delusions.rsi
+      sprite: _Eclipse/Interface/Actions/actions_delusions.rsi
       state: scream
     useDelay: 0.5
   - type: InstantAction
     event: !type:ToggleDelusionsScreenEvent
+  - type: UserInterface
+    interfaces:
+      enum.DelusionsUiKey.Key:
+        type: DelusionsBoundUserInterface

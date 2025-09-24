@@ -45,16 +45,12 @@ public record struct GetDelusionsEvent(EntityUid Entity)
     public bool Handled = false;
 }
 
-public sealed partial class ToggleDelusionsScreenEvent : InstantActionEvent
-{
-
-}
-
+public sealed partial class ToggleDelusionsScreenEvent : InstantActionEvent;
 
 [NetSerializable, Serializable]
 public enum DelusionsUiKey : byte
 {
-    Key,
+    Key
 }
 
 /// <summary>

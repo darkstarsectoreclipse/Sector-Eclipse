@@ -1,0 +1,16 @@
+# TODO : effects : remove delusional status if present, make target immune to delusion crisis effect
+- type: reagent
+  id: Cognorethan
+  name: reagent-name-cognorethan
+  desc: reagent-desc-cognorethan
+  group: Medicine
+  physicalDesc: reagent-physical-desc-enigmatic
+  flavor: magical
+  color: "#b50ee8"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:MakeSentient #!type:SDSResistant
+        conditions:
+        - !type:ReagentThreshold
+          min: 5

@@ -1,14 +1,16 @@
-delusion-ui-menu-title = Delusions
-delusions-update-notify = You've become delusional !
-delusion-update-explain = Delusions are beliefs your character will consider true no matter what ! You can view your current delusions at any time via the delusion panel.
+delusions-ui-menu-title = Your Delusions
 
-delusions-end-notify = You're no longer delusional !
+delusions-start-notify = You are now delusional !
+delusions-update-notify = Your delusions have changed !
+delusions-end-notify = You are no longer delusional !
 
-delusion-ui-verb = Edit Delusions
-delusion-admin-ui-title = Edit Delusions
-delusion-admin-ui-new-delusion = New Delusion
-delusion-admin-ui-save = Save
-delusion-admin-ui-delete = Delete
+delusions-explain = Delusions are beliefs your character consider true. You can see your current delusions via the view delusions menu.
 
-admin-trick-add-delusion-description = Add a random delusion to this entity.
+delusions-ui-verb = Edit Delusions
+delusions-admin-ui-title = Edit Delusions
+delusions-admin-ui-new-delusion = New Delusion
+delusions-admin-ui-save = Save
+delusions-admin-ui-delete = Delete
+
+admin-trick-add-delusions-description = Add a random delusion to this entity.
 admin-trick-give-delusions-description = Give this entity delusions.
