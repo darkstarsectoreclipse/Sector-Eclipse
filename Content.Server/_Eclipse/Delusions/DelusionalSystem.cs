@@ -43,7 +43,7 @@ public sealed class DelusionalSystem : SharedDelusionalSystem
         args.Handled = true;
 
 
-        // interface does not contain the key...
+        _bui.TryToggleUi(ent.Owner, DelusionsUiKey.Key, actor.PlayerSession);
     }
 
     private void OnBoundUIOpened(Entity<DelusionalComponent> ent, ref BoundUIOpenedEvent args)
