@@ -32,7 +32,7 @@ delusion-vertigo-name = Vertigo
 delusion-vertigo-desc = You suffer from altitude sickness, and even standing up make you feel nauseous.
 
 delusion-messiah-name = God Complex
-delusion-messhia-desc =  You are the center of the universe, an immortal being with no sense of time or morality.
+delusion-messiah-desc =  You are the center of the universe, an immortal being with no sense of time or morality.
 
 delusion-artist-name = Ultimate Artist
 delusion-artist-desc = You are the ultimate artist and you are here to work on a large-scale art project.
