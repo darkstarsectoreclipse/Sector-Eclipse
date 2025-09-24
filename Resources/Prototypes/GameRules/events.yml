@@ -25,6 +25,7 @@
     - id: SpiderSpawn
     - id: VentClog
     - id: ClosetSkeleton # Umbra: Moved from BasicAntagEventsTable
+    # Eclipse : TODO : add DelusionCrisis
 
 - type: entityTable
   id: BasicAntagEventsTable
@@ -49,6 +50,7 @@
     - id: WizardSpawn
     - !type:NestedSelector
       tableId: DerelictBorgEventTable
+    # TODO : add DelusionCrisis
 
 - type: entityTable
   id: DerelictBorgEventTable #For Derelict Borg spawns
