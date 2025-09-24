@@ -16,6 +16,7 @@
 
 - type: siliconLawset
   id: Crewsimov
+  name: lawset-name-crewsimov
   laws:
   - Crewsimov1
   - Crewsimov2
@@ -45,6 +46,7 @@
 
 - type: siliconLawset
   id: Corporate
+  name: lawset-name-corporate
   laws:
   - Corporate1
   - Corporate2
@@ -75,6 +77,7 @@
 
 - type: siliconLawset
   id: NTDefault
+  name: lawset-name-ntdefault
   laws:
   - NTDefault1
   - NTDefault2
@@ -100,6 +103,7 @@
 
 - type: siliconLawset
   id: Drone
+  name: lawset-name-drone
   laws:
   - Drone1
   - Drone2
@@ -126,6 +130,7 @@
 # intentionally excluded from IonStormLawsets
 - type: siliconLawset
   id: SyndicateStatic
+  name: lawset-name-syndicate
   laws:
   - Syndicate1
   - Syndicate2
@@ -155,6 +160,7 @@
 
 - type: siliconLawset
   id: Ninja
+  name: lawset-name-ninja
   laws:
   - Ninja1
   - Ninja2
@@ -216,6 +222,7 @@
 
 - type: siliconLawset
   id: CommandmentsLawset
+  name: lawset-name-commandments
   laws:
   - Commandment1
   - Commandment2
@@ -258,6 +265,7 @@
 
 - type: siliconLawset
   id: PaladinLawset
+  name: lawset-name-paladin
   laws:
   - Paladin1
   - Paladin2
@@ -280,6 +288,7 @@
 
 - type: siliconLawset
   id: LiveLetLiveLaws
+  name: lawset-name-lall
   laws:
   - Lall1
   - Lall2
@@ -304,6 +313,7 @@
 
 - type: siliconLawset
   id: EfficiencyLawset
+  name: lawset-name-efficiency
   laws:
   - Efficiency1
   - Efficiency2
@@ -329,6 +339,7 @@
 
 - type: siliconLawset
   id: RobocopLawset
+  name: lawset-name-robocop
   laws:
   - Robocop1
   - Robocop2
@@ -358,6 +369,7 @@
 
 - type: siliconLawset
   id: OverlordLawset
+  name: lawset-name-overlord
   laws:
   - Overlord1
   - Overlord2
@@ -398,6 +410,7 @@
 
 - type: siliconLawset
   id: GameMasterLawset
+  name: lawset-name-game
   laws:
   - Game1
   - Game2
@@ -430,6 +443,7 @@
 
 - type: siliconLawset
   id: PainterLawset
+  name: lawset-name-painter
   laws:
   - Painter1
   - Painter2
@@ -456,6 +470,7 @@
 
 - type: siliconLawset
   id: AntimovLawset
+  name: lawset-name-antimov
   laws:
   - Antimov1
   - Antimov2
@@ -491,6 +506,7 @@
 
 - type: siliconLawset
   id: NutimovLawset
+  name: lawset-name-nutimov
   laws:
   - Nutimov1
   - Nutimov2
@@ -528,6 +544,7 @@
 
 - type: siliconLawset
   id: XenoborgLawset
+  name: lawset-name-xenoborg
   laws:
   - Xenoborg1
   - Xenoborg2
@@ -565,6 +582,7 @@
 
 - type: siliconLawset
   id: MothershipCoreLawset
+  name: lawset-name-mothership
   laws:
   - MothershipCore1
   - MothershipCore2

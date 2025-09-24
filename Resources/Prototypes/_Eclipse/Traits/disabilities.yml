@@ -1,0 +1,8 @@
+# TODO : add prescription pills as traitGear
+- type: trait
+  id: SpaceDelusions
+  name: trait-space-delusions-name
+  desc: trait-space-delusions-desc
+  category: Disabilities
+  components:
+  - type: DelusionCrisisTarget

@@ -1,0 +1,16 @@
+<controls:FancyWindow xmlns="https://spacestation14.io"
+                      xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+                      Title="{Loc delusions-admin-ui-title}"
+                      MinSize="560 400">
+    <BoxContainer Orientation="Vertical">
+        <BoxContainer Orientation="Horizontal" Align="End">
+            <Button Name="NewDelusionButton" Text="{Loc delusions-admin-ui-new-delusions}" MaxSize="256 64" StyleClasses="OpenRight"/>
+            <Button Name="SaveButton" Text="{Loc delusions-admin-ui-save}" MaxSize="256 64" StyleClasses="OpenLeft"/>
+        </BoxContainer>
+    </BoxContainer>
+    <BoxContainer Orientation="Vertical" Margin="4 60 0 0">
+        <ScrollContainer VerticalExpand="True" HorizontalExpand="True" HScrollEnabled="False">
+            <BoxContainer Orientation="Vertical" Name="DelusionContainer" VerticalExpand="True"/>
+        </ScrollContainer>
+    </BoxContainer>
+</controls:FancyWindow>
