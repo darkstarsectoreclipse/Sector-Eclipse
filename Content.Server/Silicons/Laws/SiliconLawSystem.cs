@@ -35,6 +35,22 @@ public sealed class SiliconLawSystem : SharedSiliconLawSystem
     [Dependency] private readonly EmagSystem _emag = default!;
     [Dependency] private readonly SharedStationAiShellUserSystem _shellUser = default!;
 
+    // StudMuffin : this should not be hardcoded into the system but this will do for now
+    private readonly List<ProtoId<SiliconLawsetPrototype>> _standardLawsets = new List<ProtoId<SiliconLawsetPrototype>>
+    {
+        "Crewsimov",
+        "Corporate",
+        "NTDefault",
+        "CommandmentsLawset",
+        "PaladinLawset",
+        "LiveLetLiveLaws",
+        "EfficiencyLawset",
+        "RobocopLawset",
+        "GameMasterLawset",
+        "PainterLawset",
+        "NutimovLawset",
+    };
+
     /// <inheritdoc/>
     public override void Initialize()
     {
@@ -108,7 +124,14 @@ public sealed class SiliconLawSystem : SharedSiliconLawSystem
         TryComp(uid, out IntrinsicRadioTransmitterComponent? intrinsicRadio);
         var radioChannels = intrinsicRadio?.Channels;
 
-        var state = new SiliconLawBuiState(GetLaws(uid).Laws, radioChannels);
+        //var state = new SiliconLawBuiState(GetLaws(uid).Laws, radioChannels);
+        var standardLawsets = new List<SiliconLawset>();
+        for (int i = 0; i < _standardLawsets.Count; i++)
+        {
+            standardLawsets.Add(GetLawset(_standardLawsets[i]));
+        }
+
+        var state = new SiliconLawBuiState(GetLaws(uid).Laws, standardLawsets, radioChannels);
         _userInterface.SetUiState(args.Entity, SiliconLawsUiKey.Key, state);
     }
 
@@ -273,6 +296,8 @@ public sealed class SiliconLawSystem : SharedSiliconLawSystem
         {
             laws.Laws.Add(_prototype.Index<SiliconLawPrototype>(law).ShallowClone());
         }
+
+        laws.Name = Loc.GetString(proto.Name);
         laws.ObeysTo = proto.ObeysTo;
 
         return laws;

@@ -51,11 +51,13 @@ public enum SiliconLawsUiKey : byte
 public sealed class SiliconLawBuiState : BoundUserInterfaceState
 {
     public List<SiliconLaw> Laws;
+    public List<SiliconLawset> StandardLawsets;
     public HashSet<string>? RadioChannels;
 
-    public SiliconLawBuiState(List<SiliconLaw> laws, HashSet<string>? radioChannels)
+    public SiliconLawBuiState(List<SiliconLaw> laws, List<SiliconLawset> standardLawsets, HashSet<string>? radioChannels)
     {
         Laws = laws;
+        StandardLawsets = standardLawsets;
         RadioChannels = radioChannels;
     }
 }

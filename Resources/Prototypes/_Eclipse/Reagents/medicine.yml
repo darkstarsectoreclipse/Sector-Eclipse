@@ -1,0 +1,15 @@
+- type: reagent
+  id: Cognorethan
+  name: reagent-name-cognorethan
+  desc: reagent-desc-cognorethan
+  group: Medicine
+  physicalDesc: reagent-physical-desc-enigmatic
+  flavor: magical
+  color: "#b50ee8"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:ChemResistDelusions
+        conditions:
+        - !type:ReagentThreshold
+          min: 5

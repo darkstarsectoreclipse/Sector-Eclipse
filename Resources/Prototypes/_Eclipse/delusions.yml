@@ -1,0 +1,125 @@
+#
+- type: delusion
+  id: DelusionKiller
+  name: delusion-killer-name
+  description: delusion-killer-desc
+
+- type: delusion
+  id: DelusionConspiracy
+  name: delusion-conspiracy-name
+  description: delusion-conspiracy-desc
+
+- type: delusion
+  id: DelusionClaustro
+  name: delusion-claustrophobia-name
+  description: delusion-claustrophobia-desc
+
+- type: delusion
+  id: DelusionAgo
+  name: delusion-agoraphobia-name
+  description: delusion-agoraphobia-desc
+
+- type: delusion
+  id: DelusionGlass
+  name: delusion-glass-name
+  description: delusion-glass-desc
+
+- type: delusion
+  id: DelusionClones
+  name: delusion-clones-name
+  description: delusion-clones-desc
+
+- type: delusion
+  id: DelusionGhosts
+  name: delusion-ghosts-name
+  description: delusion-ghosts-desc
+
+- type: delusion
+  id: DelusionWhisper
+  name: delusion-whisper-name
+  description: delusion-whisper-desc
+
+- type: delusion
+  id: DelusionChoosen
+  name: delusion-choosen-name
+  description: delusion-choosen-desc
+
+- type: delusion
+  id: DelusionGermo
+  name: delusion-germophobia-name
+  description: delusion-germophobia-desc
+
+- type: delusion
+  id: DelusionVertigo
+  name: delusion-vertigo-name
+  description: delusion-vertigo-desc
+
+- type: delusion
+  id: DelusionMessiah
+  name: delusion-messiah-name
+  description: delusion-messiah-desc
+
+- type: delusion
+  id: DelusionArtist
+  name: delusion-artist-name
+  description: delusion-artist-desc
+
+- type: delusion
+  id: DelusionAnimals
+  name: delusion-animals-name
+  description: delusion-animals-desc
+
+- type: delusion
+  id: DelusionRandom
+  name: delusion-random-name
+  description: delusion-random-desc
+
+- type: delusion
+  id: DelusionBenefactor
+  name: delusion-benefactor-name
+  description: delusion-benefactor-desc
+
+- type: delusion
+  id: DelusionPoison
+  name: delusion-poison-name
+  description: delusion-poison-desc
+
+- type: delusion
+  id: DelusionFashion
+  name: delusion-fashion-name
+  description: delusion-fashion-desc
+
+- type: delusion
+  id: DelusionPermanence
+  name: delusion-permanence-name
+  description: delusion-permanence-desc
+
+- type: delusion
+  id: DelusionInvincible
+  name: delusion-invincible-name
+  description: delusion-invincible-desc
+
+- type: delusion
+  id: DelusionMessage
+  name: delusion-message-name
+  description: delusion-message-desc
+
+- type: delusion
+  id: DelusionLight
+  name: delusion-light-name
+  description: delusion-light-desc
+
+- type: delusion
+  id: DelusionMhysteria
+  name: delusion-mhysteria-name
+  description: delusion-mhysteria-desc
+
+- type: delusion
+  id: DelusionSilicons
+  name: delusion-silicons-name
+  description: delusion-silicons-desc
+
+- type: delusion
+  id: DelusionCommand
+  name: delusion-command-name
+  description: delusion-command-desc
