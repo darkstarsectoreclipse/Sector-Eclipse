@@ -46,12 +46,27 @@ public sealed class DelusionCrisisSystem : EntitySystem
 
     }
 
+    public void SetImmunityDelay(EntityUid uid, TimeSpan delayTime, DelusionCrisisTargetComponent? target = null)
+    {
+        var now = IoCManager.Resolve<IGameTiming>().CurTime;
+
+        if (target == null && ! TryComp(uid, out target))
+            return;
+
+        target.TimeEndImmunity = now + delayTime;
+    }
+
+
     private void AttemptCrisis(Entity<DelusionCrisisTargetComponent> ent)
     {
         var target = ent.Comp;
-        if (target.Resistant)
+        var now =  IoCManager.Resolve<IGameTiming>().CurTime;
+
+        // target is immune
+        if (now < target.TimeEndImmunity)
             return;
 
+        // crisis failed
         if (!_robustRandom.Prob(target.CrisisSuccessProbability))
             return;
 
@@ -101,12 +116,6 @@ public sealed class DelusionCrisisSystem : EntitySystem
 
         delusions[index] = _proto.Index<DelusionPrototype>(prototype);
         _delusionalSystem.SetDelusions(ent, delusions, notify);
-    }
-
-    private Delusion PickRandomDelusion()
-    {
-        var id = _robustRandom.Pick(_proto.Index(_baseDelusions).Delusions);
-        return _proto.Index(id);
     }
 
     private bool TryPickRandomDelusion(ProtoId<DelusionDatabasePrototype> database, List<ProtoId<DelusionPrototype>?> excluded, [NotNullWhen(true)] out DelusionPrototype? prototype)

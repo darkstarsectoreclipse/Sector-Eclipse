@@ -73,6 +73,13 @@ public sealed class DelusionalSystem : SharedDelusionalSystem
             NotifyDelusionsChanged(ent);
     }
 
+    public void RemoveDelusions(EntityUid ent)
+    {
+        if (!TryComp<DelusionalComponent>(ent, out var delusionalComponent))
+            return;
+        RemComp(ent, delusionalComponent);
+    }
+
     public void NotifyDelusionsStarted(Entity<DelusionalComponent> ent)
     {
         var target = ent.Comp;

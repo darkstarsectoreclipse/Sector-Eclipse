@@ -1,5 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using Content.Server._Eclipse.Delusions;
 using Content.Server.Atmos.EntitySystems;
 using Content.Server.Body.Components;
 using Content.Server.Body.Systems;
@@ -21,6 +22,7 @@ using Content.Server.Temperature.Systems;
 using Content.Server.Traits.Assorted;
 using Content.Server.Zombies;
 using Content.Shared._CD.EntityEffects.Effects;
+using Content.Shared._Eclipse.EntityEffects.Effects;
 using Content.Shared.Atmos;
 using Content.Shared.Atmos.Components;
 using Content.Shared.Body.Components;
@@ -128,6 +130,7 @@ public sealed class EntityEffectSystem : EntitySystem
         SubscribeLocalEvent<ExecuteEntityEffectEvent<PolymorphEffect>>(OnExecutePolymorph);
         SubscribeLocalEvent<ExecuteEntityEffectEvent<ResetNarcolepsy>>(OnExecuteResetNarcolepsy);
         SubscribeLocalEvent<ExecuteEntityEffectEvent<ResetParacusia>>(OnExecuteResetParacusia); // CD Change
+        SubscribeLocalEvent<ExecuteEntityEffectEvent<TreatDelusions>>(OnExecuteTreatDelusions); // Eclipse Change
     }
 
     private void OnCheckTemperature(ref CheckEntityEffectConditionEvent<TemperatureCondition> args)
@@ -1006,4 +1009,12 @@ public sealed class EntityEffectSystem : EntitySystem
         sys.SetIncidentDelay(args.Args.TargetEntity, new TimeSpan(0, 0, args.Effect.TimerReset));
     }
 
+    private void OnExecuteTreatDelusions(ref ExecuteEntityEffectEvent<TreatDelusions> args) // Eclipse Method
+    {
+        var sys1 = args.Args.EntityManager.EntitySysManager.GetEntitySystem<DelusionalSystem>();
+        sys1.RemoveDelusions(args.Args.TargetEntity);
+
+        var sys2 = args.Args.EntityManager.EntitySysManager.GetEntitySystem<DelusionCrisisSystem>();
+        sys2.SetImmunityDelay(args.Args.TargetEntity, new TimeSpan(0, 0, args.Effect.Delay));
+    }
 }

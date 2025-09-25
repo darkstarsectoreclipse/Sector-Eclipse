@@ -34,7 +34,7 @@ public sealed partial class DelusionCrisisTargetComponent : Component
     /// If true, the target is not affected by Delusion Crisis.
     /// </summary>
     [DataField, AutoNetworkedField]
-    public bool Resistant = false;
+    public TimeSpan TimeEndImmunity = TimeSpan.Zero;
 
 
     [DataField, AutoNetworkedField]

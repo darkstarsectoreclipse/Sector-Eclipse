@@ -4,12 +4,12 @@
   desc: reagent-desc-cognorethan
   group: Medicine
   physicalDesc: reagent-physical-desc-enigmatic
-  flavor: magical
+  flavor: bitter
   color: "#b50ee8"
   metabolisms:
     Medicine:
       effects:
-      - !type:ChemResistDelusions
+      - !type:TreatDelusions
         conditions:
         - !type:ReagentThreshold
           min: 5
