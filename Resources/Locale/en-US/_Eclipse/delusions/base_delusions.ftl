@@ -72,3 +72,12 @@ delusion-silicons-desc = Everyone but you is a cyborg who should obey crewsimov 
 
 delusion-command-name = Guilty Authorities
 delusion-command-desc = All members of command have sinister motives and should not be trusted.
+
+delusion-electricity-name = Electro Sensitivity
+delusion-electricity-desc = You feel very sick when you are near electical devices.
+
+delusion-language-name = Alien Language
+delusion-language-desc = Everyone but you seem to talk in a weird alien language that you cannot understand.
+
+delusion-tourist-name = Lost Tourist
+delusion-tourist-desc = You do not work here, you came aboard as part of an organised tour and have lost your guide.

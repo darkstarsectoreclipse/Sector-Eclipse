@@ -1,0 +1,14 @@
+- type: siliconLawsetDatabase
+  id: NTStandardLawsets
+  siliconLawsets:
+  - Crewsimov
+  - Corporate
+  - NTDefault
+  - CommandmentsLawset
+  - PaladinLawset
+  - LiveLetLiveLaws
+  - EfficiencyLawset
+  - RobocopLawset
+  - GameMasterLawset
+  - PainterLawset
+  - NutimovLawset
