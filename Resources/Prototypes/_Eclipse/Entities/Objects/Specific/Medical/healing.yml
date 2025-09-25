@@ -1,0 +1,19 @@
+- type: entity
+  name: pill
+  suffix: Cognorethan 10u
+  parent: Pill
+  id: PillCognorethan
+  components:
+  - type: Pill
+    pillType: 15
+  - type: Sprite
+    state: pill19
+  - type: Label
+    currentLabel: cognorethan 10u
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Cognorethan
+          Quantity: 10

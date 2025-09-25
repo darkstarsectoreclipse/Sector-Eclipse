@@ -6,9 +6,7 @@
   components:
   - type: Action
     itemIconStyle: NoItem
-    icon:
-      sprite: _Eclipse/Interface/Actions/actions_delusions.rsi
-      state: scream
+    icon: { sprite: _Eclipse/Interface/Actions/actions_delusions.rsi, state: view_delusions }
     useDelay: 0.5
   - type: InstantAction
     event: !type:ToggleDelusionsScreenEvent
