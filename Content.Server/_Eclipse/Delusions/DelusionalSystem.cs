@@ -34,6 +34,7 @@ public sealed class DelusionalSystem : SharedDelusionalSystem
 
     private void OnDelusionalInit(Entity<DelusionalComponent> ent, ref MapInitEvent args)
     {
+
         NotifyDelusionsStarted(ent);
 
         ent.Comp.Action = _actions.AddAction(ent.Owner, _actionViewDelusions);
