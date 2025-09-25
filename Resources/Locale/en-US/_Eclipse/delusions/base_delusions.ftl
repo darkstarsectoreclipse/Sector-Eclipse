@@ -14,7 +14,7 @@ delusion-glass-name = Made of Glass
 delusion-glass-desc = Your body is very fragile and would break with the slightest shock.
 
 delusion-clones-name = Body Snatchers
-delusion-clones-desc = Peoples around you are being replaced with exact copies of themselves.
+delusion-clones-desc = Peoples around you are monsters pretending to be peoples.
 
 delusion-ghosts-name = Ghost Invasion
 delusion-ghosts-desc = The station is full of invisible ghosts and you know it.
