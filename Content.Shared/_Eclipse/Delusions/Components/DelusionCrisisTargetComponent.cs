@@ -6,26 +6,37 @@ namespace Content.Shared._Eclipse.Delusions;
 public sealed partial class DelusionCrisisTargetComponent : Component
 {
     /// <summary>
-    /// Sensibility of the target. Will be hit by (1/sensibility)
+    /// Average delay between 2 crisis
     /// </summary>
     [DataField, AutoNetworkedField]
-    public float Sensibility = 0.2f;
+    public TimeSpan DelayBetweenCrisis = TimeSpan.FromMinutes(5);
 
     /// <summary>
-    /// Will cancel every crisis attempt made on the entity
+    /// Maximum delay added or removed from the DelayBetweenCrisis to compute next crisis time
     /// </summary>
     [DataField, AutoNetworkedField]
-    public bool Resistant = false;
+    public TimeSpan DelayVariation = TimeSpan.FromMinutes(2.5);
 
     /// <summary>
-    /// Probability that a successful delusion crisis add a new delusion
+    /// Probability that a Delusion Crisis have an effect on the target
     /// </summary>
     [DataField, AutoNetworkedField]
-    public float ProbabilityAddDelusion = 0.2f;
+    public float CrisisSuccessProbability = 0.5f;
 
     /// <summary>
-    /// Probability that a successful crisis replace an existing delusion
+    /// Probability that a Delusion Crisis add a new delusion instead of replacing one.
     /// </summary>
     [DataField, AutoNetworkedField]
-    public float ProbabilityReplaceDelusion = 0.2f;
+    public float AggravationProbability = 0.25f;
+
+
+    /// <summary>
+    /// If true, the target is not affected by Delusion Crisis.
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public TimeSpan TimeEndImmunity = TimeSpan.Zero;
+
+
+    [DataField, AutoNetworkedField]
+    public TimeSpan TimeNextCrisis = TimeSpan.Zero;
 }

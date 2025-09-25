@@ -9,6 +9,7 @@
       - Meat
       - Paper
       - MantidaeFood
+      - Pill # Eclipse change : Allow Mantidae to take pills !
   - type: SolutionContainerManager
     solutions:
       stomach:

@@ -1,0 +1,12 @@
+- type: entity
+  name: pill canister
+  parent: PillCanister
+  id: PillCanisterCognorethan
+  suffix: Cognorethan 10u, 7
+  components:
+  - type: Label
+    currentLabel: cognorethan 10u
+  - type: StorageFill
+    contents:
+      - id: PillCognorethan
+        amount: 7

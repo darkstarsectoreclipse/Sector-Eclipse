@@ -4,6 +4,7 @@ using Content.Server.Chat.Managers;
 using Content.Server.Radio.Components;
 using Content.Server.Station.Systems;
 using Content.Shared._CD.Silicons.StationAi;
+using Content.Shared._Eclipse.Silicons.Laws;
 using Content.Shared.Administration;
 using Content.Shared.Chat;
 using Content.Shared.Emag.Systems;
@@ -35,21 +36,7 @@ public sealed class SiliconLawSystem : SharedSiliconLawSystem
     [Dependency] private readonly EmagSystem _emag = default!;
     [Dependency] private readonly SharedStationAiShellUserSystem _shellUser = default!;
 
-    // StudMuffin : this should not be hardcoded into the system but this will do for now
-    private readonly List<ProtoId<SiliconLawsetPrototype>> _standardLawsets = new List<ProtoId<SiliconLawsetPrototype>>
-    {
-        "Crewsimov",
-        "Corporate",
-        "NTDefault",
-        "CommandmentsLawset",
-        "PaladinLawset",
-        "LiveLetLiveLaws",
-        "EfficiencyLawset",
-        "RobocopLawset",
-        "GameMasterLawset",
-        "PainterLawset",
-        "NutimovLawset",
-    };
+    private readonly ProtoId<SiliconLawsetDatabasePrototype> _standardLawsets = "NTStandardLawsets";
 
     /// <inheritdoc/>
     public override void Initialize()
@@ -124,11 +111,12 @@ public sealed class SiliconLawSystem : SharedSiliconLawSystem
         TryComp(uid, out IntrinsicRadioTransmitterComponent? intrinsicRadio);
         var radioChannels = intrinsicRadio?.Channels;
 
-        //var state = new SiliconLawBuiState(GetLaws(uid).Laws, radioChannels);
+
+        var standardProtoLawsets = _prototype.Index(_standardLawsets);
         var standardLawsets = new List<SiliconLawset>();
-        for (int i = 0; i < _standardLawsets.Count; i++)
+        foreach (var id in standardProtoLawsets.SiliconLawsets)
         {
-            standardLawsets.Add(GetLawset(_standardLawsets[i]));
+            standardLawsets.Add(GetLawset(_prototype.Index(id)));
         }
 
         var state = new SiliconLawBuiState(GetLaws(uid).Laws, standardLawsets, radioChannels);

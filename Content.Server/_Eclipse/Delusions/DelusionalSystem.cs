@@ -10,10 +10,6 @@ using Robust.Shared.Audio.Systems;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 
-// Debug stuff to remove
-
-// End of this
-
 namespace Content.Server._Eclipse.Delusions;
 
 public sealed class DelusionalSystem : SharedDelusionalSystem
@@ -36,12 +32,31 @@ public sealed class DelusionalSystem : SharedDelusionalSystem
         SubscribeLocalEvent<DelusionalComponent, GetDelusionsEvent>(OnDirectedGetDelusions);
     }
 
+    private void OnDelusionalInit(Entity<DelusionalComponent> ent, ref MapInitEvent args)
+    {
+
+        NotifyDelusionsStarted(ent);
+
+        ent.Comp.Action = _actions.AddAction(ent.Owner, _actionViewDelusions);
+
+        if (! TryComp<UserInterfaceComponent>(ent, out var userInterface))
+            return;
+
+        _bui.SetUi((ent, userInterface), DelusionsUiKey.Key, new InterfaceData("DelusionsBoundUserInterface"));
+    }
+
+    private void OnDelusionalShutdown(Entity<DelusionalComponent> ent, ref ComponentShutdown args)
+    {
+        NotifyDelusionsEnded(ent);
+
+        _actions.RemoveAction(ent.Owner, ent.Comp.Action);
+    }
+
     private void OnToggleDelusionsScreen(Entity<DelusionalComponent> ent, ref ToggleDelusionsScreenEvent args)
     {
         if (args.Handled || !TryComp<ActorComponent>(ent, out var actor))
             return;
         args.Handled = true;
-
 
         _bui.TryToggleUi(ent.Owner, DelusionsUiKey.Key, actor.PlayerSession);
     }
@@ -52,23 +67,18 @@ public sealed class DelusionalSystem : SharedDelusionalSystem
         _bui.SetUiState(args.Entity, DelusionsUiKey.Key, state);
     }
 
-    /// <summary>
-    /// Set the delusions of a delusional entity while notifying the player
-    /// </summary>
-    public void SetDelusions(Entity<DelusionalComponent> ent, List<Delusion> newDelusions)
+    public void SetDelusions(Entity<DelusionalComponent> ent, List<Delusion> delusions, bool notifyPlayer = false)
     {
-        var target = ent.Comp;
-        target.Delusions = newDelusions;
-        NotifyDelusionsChanged(ent);
+        ent.Comp.Delusions = delusions;
+        if (notifyPlayer)
+            NotifyDelusionsChanged(ent);
     }
 
-    /// <summary>
-    /// Remove all delusions of a delusional entity while notifying the player
-    /// </summary>
-    /// <param name="ent"></param>
-    public void RemoveDelusions(Entity<DelusionalComponent> ent)
+    public void RemoveDelusions(EntityUid ent)
     {
-        RemComp<DelusionalComponent>(ent);
+        if (!TryComp<DelusionalComponent>(ent, out var delusionalComponent))
+            return;
+        RemComp(ent, delusionalComponent);
     }
 
     public void NotifyDelusionsStarted(Entity<DelusionalComponent> ent)
@@ -133,22 +143,4 @@ public sealed class DelusionalSystem : SharedDelusionalSystem
         args.Handled = true;
     }
 
-    private void OnDelusionalInit(Entity<DelusionalComponent> ent, ref MapInitEvent args)
-    {
-        NotifyDelusionsStarted(ent);
-
-        ent.Comp.Action = _actions.AddAction(ent.Owner, _actionViewDelusions);
-
-        if (! TryComp<UserInterfaceComponent>(ent, out var userInterface))
-            return;
-
-        _bui.SetUi((ent, userInterface), DelusionsUiKey.Key, new InterfaceData("DelusionsBoundUserInterface"));
-    }
-
-    private void OnDelusionalShutdown(Entity<DelusionalComponent> ent, ref ComponentShutdown args)
-    {
-        NotifyDelusionsEnded(ent);
-
-        _actions.RemoveAction(ent.Owner, ent.Comp.Action);
-    }
 }

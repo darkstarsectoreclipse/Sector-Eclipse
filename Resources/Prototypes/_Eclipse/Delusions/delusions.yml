@@ -1,4 +1,3 @@
-#
 - type: delusion
   id: DelusionKiller
   name: delusion-killer-name
@@ -123,3 +122,18 @@
   id: DelusionCommand
   name: delusion-command-name
   description: delusion-command-desc
+
+- type: delusion
+  id: DelusionElectricity
+  name: delusion-electricity-name
+  description: delusion-electricity-desc
+
+- type: delusion
+  id: DelusionLanguage
+  name: delusion-language-name
+  description: delusion-language-desc
+
+- type: delusion
+  id: DelusionTourist
+  name: delusion-tourist-name
+  description: delusion-tourist-desc

@@ -14,7 +14,7 @@ delusion-glass-name = Made of Glass
 delusion-glass-desc = Your body is very fragile and would break with the slightest shock.
 
 delusion-clones-name = Body Snatchers
-delusion-clones-desc = Peoples around you are being replaced with exact copies of themselves.
+delusion-clones-desc = Peoples around you are monsters pretending to be peoples.
 
 delusion-ghosts-name = Ghost Invasion
 delusion-ghosts-desc = The station is full of invisible ghosts and you know it.
@@ -50,7 +50,7 @@ delusion-poison-name = Mass Medicine Sabotage
 delusion-poison-desc = All medecine on station is laced with a slow acting lethal poison.
 
 delusion-fashionista-name = Fashionista
-delusion-fashionista-desc = You must always be the most fashionable person aboard.
+delusion-fashionista-desc = You are extremely vulnerable when you are not fashionable.
 
 delusion-permanence-name = No Object Permanence
 delusion-permanence-desc = Everything you don't see directly does not exist.
@@ -68,7 +68,16 @@ delusion-mhysteria-name = Mass Hysteria
 delusion-mhysteria-desc = Everyone but you is suffering from hysteria.
 
 delusion-silicons-name = Silicon World
-delusion-silicons-desc = Everyone but you is a cyborg who should obey crewsimov laws.
+delusion-silicons-desc = Everyone but you is a cyborg and should obey crewsimov laws.
 
 delusion-command-name = Guilty Authorities
 delusion-command-desc = All members of command have sinister motives and should not be trusted.
+
+delusion-electricity-name = Electro Sensitivity
+delusion-electricity-desc = You feel very sick when you are near electical devices.
+
+delusion-language-name = Alien Language
+delusion-language-desc = Everyone but you seem to talk in a weird alien language that you cannot understand.
+
+delusion-tourist-name = Lost Tourist
+delusion-tourist-desc = You do not work here, you came aboard as part of an organised tour and have lost your guide.
