@@ -1,6 +1,5 @@
 using Robust.Shared.Serialization;
 using Robust.Shared.Prototypes;
-using Robust.Shared.Serialization;
 
 namespace Content.Shared._Eclipse.Delusions;
 
@@ -14,7 +13,7 @@ public partial class DelusionDatabase
 }
 
 [Prototype]
-public partial class DelusionDatabasePrototype : DelusionDatabase, IPrototype
+public sealed partial class DelusionDatabasePrototype : DelusionDatabase, IPrototype
 {
     /// <inheritdoc/>
     [IdDataField]

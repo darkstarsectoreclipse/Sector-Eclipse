@@ -9,6 +9,13 @@ namespace Content.Shared._Eclipse.Delusions;
 public partial class Delusion
 {
     /// <summary>
+    /// The prototype this Delusion was created for, used to manage conflicts.
+    /// Do not apply to manually created Delusions.
+    /// </summary>
+    [DataField]
+    public ProtoId<DelusionPrototype>? ProtoId;
+
+    /// <summary>
     /// A locale string of the delusion name.
     /// </summary>
     [DataField(required: true)]
@@ -34,6 +41,7 @@ public partial class Delusion
     {
         return new Delusion()
         {
+            ProtoId = ProtoId,
             Name = Name,
             Description = Description,
         };
@@ -46,4 +54,9 @@ public sealed partial class DelusionPrototype : Delusion, IPrototype
 {
     [IdDataField]
     public string ID { get; private set; } = default!;
+
+    public DelusionPrototype()
+    {
+        ProtoId = ID;
+    }
 }

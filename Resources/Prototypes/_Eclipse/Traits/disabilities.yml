@@ -3,6 +3,7 @@
   id: SpaceDelusions
   name: trait-space-delusions-name
   description: trait-space-delusions-desc
+  traitGear: PillCanister
   category: Disabilities
   components:
   - type: DelusionCrisisTarget

@@ -1,3 +1,5 @@
+using System.Diagnostics.CodeAnalysis;
+using System.Linq;
 using Content.Shared._Eclipse.Delusions;
 using Content.Shared._Eclipse.Delusions.Components;
 using Robust.Shared.Prototypes;
@@ -28,18 +30,18 @@ public sealed class DelusionCrisisSystem : EntitySystem
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
-        var timing = IoCManager.Resolve<IGameTiming>();
+        var now = IoCManager.Resolve<IGameTiming>().CurTime;
 
         var query = EntityQueryEnumerator<DelusionCrisisTargetComponent>();
         while (query.MoveNext(out var entityUid, out var target))
         {
-            if (timing.CurTime < target.TimeNextCrisis)
+            if (now < target.TimeNextCrisis)
                 continue;
 
             AttemptCrisis((entityUid, target));
 
-            target.TimeNextCrisis = timing.CurTime + target.DelayBetweenCrisis;
-            target.TimeNextCrisis += _robustRandom.NextFloat(-0.5f, 0.5f) * target.DelayVariation;
+            target.TimeNextCrisis = now + target.DelayBetweenCrisis;
+            target.TimeNextCrisis += _robustRandom.NextFloat(-1f, 1f) * target.DelayVariation;
         }
 
     }
@@ -53,19 +55,52 @@ public sealed class DelusionCrisisSystem : EntitySystem
         if (!_robustRandom.Prob(target.CrisisSuccessProbability))
             return;
 
-        var delcomp = EnsureComp<DelusionalComponent>(ent);
-        var delusions = delcomp.Delusions;
+        var alreadyDelusional = TryComp<DelusionalComponent>(ent, out var delComp);
 
-        if (delusions.Count == 0 || (_robustRandom.Prob(target.AggravationProbability) && delusions.Count < delcomp.MaxDelusionsCount))
+        // ensure the target is now delusional
+
+        if (!alreadyDelusional)
+            delComp = AddComp<DelusionalComponent>(ent);
+
+        if (delComp == null)
+            return;
+
+        var delusions = delComp.Delusions;
+
+        if (delusions.Count == 0 || (_robustRandom.Prob(target.AggravationProbability) && delusions.Count < delComp.MaxDelusionsCount))
         {
-            delusions.Add(PickRandomDelusion());
+            AddRandomDelusion((ent, delComp), alreadyDelusional);
+            //delusions.Add(PickRandomDelusion());
         }
         else
         {
-            delusions[_robustRandom.Next() % delusions.Count] = PickRandomDelusion();
+            ReplaceRandomDelusion((ent, delComp), alreadyDelusional);
         }
+    }
 
-        _delusionalSystem.SetDelusions((ent.Owner, delcomp), delusions);
+    private void AddRandomDelusion(Entity<DelusionalComponent> ent, bool notify = false)
+    {
+        var delusions = ent.Comp.Delusions;
+        var excludedIds = delusions.Select(d => d.ProtoId).ToList();
+
+        if (!TryPickRandomDelusion(_baseDelusions, excludedIds, out var prototype))
+            return;
+
+        delusions.Add(_proto.Index<DelusionPrototype>(prototype));
+        _delusionalSystem.SetDelusions(ent, delusions, notify);
+    }
+
+    private void ReplaceRandomDelusion(Entity<DelusionalComponent> ent, bool notify = false)
+    {
+        var delusions = ent.Comp.Delusions;
+        var excludedIds = delusions.Select(d => d.ProtoId).ToList();
+        var index = _robustRandom.Next() % delusions.Count;
+
+        if (!TryPickRandomDelusion(_baseDelusions, excludedIds, out var prototype))
+            return;
+
+        delusions[index] = _proto.Index<DelusionPrototype>(prototype);
+        _delusionalSystem.SetDelusions(ent, delusions, notify);
     }
 
     private Delusion PickRandomDelusion()
@@ -74,17 +109,28 @@ public sealed class DelusionCrisisSystem : EntitySystem
         return _proto.Index(id);
     }
 
+    private bool TryPickRandomDelusion(ProtoId<DelusionDatabasePrototype> database, List<ProtoId<DelusionPrototype>?> excluded, [NotNullWhen(true)] out DelusionPrototype? prototype)
+    {
+        var choices = _proto.Index(database).Delusions.ToList();
+        while (choices.Count > 0)
+        {
+            var delusionId = _robustRandom.PickAndTake(choices);
+            if (excluded.Contains(delusionId))
+                continue;
+
+            prototype = _proto.Index(delusionId);
+            return true;
+        }
+        prototype = null;
+        return false;
+    }
+
     private void OnDelusionCrisisInit(Entity<DelusionCrisisTargetComponent> ent, ref MapInitEvent args)
     {
-        foreach (var id in _proto.Index(_baseDelusions).Delusions)
-        {
-            _proto.Resolve<DelusionPrototype>(id, out var prototype);
-        }
-
         var target = ent.Comp;
-        var timing =  IoCManager.Resolve<IGameTiming>();
+        var now =  IoCManager.Resolve<IGameTiming>().CurTime;
 
-        target.TimeNextCrisis = timing.CurTime + target.DelayBetweenCrisis;
-        target.TimeNextCrisis += _robustRandom.NextFloat(-0.5f, 0.5f) * target.DelayVariation;
+        target.TimeNextCrisis = now + target.DelayBetweenCrisis;
+        target.TimeNextCrisis += _robustRandom.NextFloat(-1f, 1f) * target.DelayVariation;
     }
 }

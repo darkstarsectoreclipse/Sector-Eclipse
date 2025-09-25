@@ -6,19 +6,13 @@ namespace Content.Shared._Eclipse.Delusions;
 public sealed partial class DelusionCrisisTargetComponent : Component
 {
     /// <summary>
-    /// Sensibility of the target. Will be hit by (1/sensibility)
-    /// </summary>
-    //[DataField, AutoNetworkedField]
-    //public float Sensibility = 0.2f;
-
-    /// <summary>
-    /// Average delay between 2 crisis, in seconds
+    /// Average delay between 2 crisis
     /// </summary>
     [DataField, AutoNetworkedField]
     public TimeSpan DelayBetweenCrisis = TimeSpan.FromMinutes(5);
 
     /// <summary>
-    /// The time to the next crisis in second will be random inside DelayBetweenCrisis +/- DelayVariation
+    /// Maximum delay added or removed from the DelayBetweenCrisis to compute next crisis time
     /// </summary>
     [DataField, AutoNetworkedField]
     public TimeSpan DelayVariation = TimeSpan.FromMinutes(2.5);
@@ -27,7 +21,7 @@ public sealed partial class DelusionCrisisTargetComponent : Component
     /// Probability that a Delusion Crisis have an effect on the target
     /// </summary>
     [DataField, AutoNetworkedField]
-    public float CrisisSuccessProbability = 0.25f;
+    public float CrisisSuccessProbability = 0.5f;
 
     /// <summary>
     /// Probability that a Delusion Crisis add a new delusion instead of replacing one.
@@ -45,15 +39,4 @@ public sealed partial class DelusionCrisisTargetComponent : Component
 
     [DataField, AutoNetworkedField]
     public TimeSpan TimeNextCrisis = TimeSpan.Zero;
-    /// <summary>
-    /// Probability that a successful delusion crisis add a new delusion
-    /// </summary>
-    //[DataField, AutoNetworkedField]
-    //public float ProbabilityAddDelusion = 0.2f;
-
-    /// <summary>
-    /// Probability that a successful crisis replace an existing delusion
-    /// </summary>
-    //[DataField, AutoNetworkedField]
-    //public float ProbabilityReplaceDelusion = 0.2f;
 }
