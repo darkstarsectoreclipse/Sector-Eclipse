@@ -70,6 +70,14 @@
         {
             "name": "antennae_curved",
             "directions": 4
+        },
+        {
+            "name": "head_shade",
+            "directions": 4
+        },
+        {
+            "name": "head_stripes",
+            "directions": 4
         }
     ]
 }

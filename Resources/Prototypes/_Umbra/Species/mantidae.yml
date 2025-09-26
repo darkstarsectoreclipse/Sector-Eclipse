@@ -50,7 +50,8 @@
       required: false
     Tail:
       points: 1
-      required: false
+      required: true
+      defaultMarkings: [ MantidaeTail ]
     Snout:
       points: 1
       required: false
@@ -79,7 +80,7 @@
   id: MobMantidaeHead
   baseSprite:
     sprite: _Umbra/Mobs/Species/Mantidae/parts.rsi
-    state: head_m_3 #change
+    state: head_m_3 # Eclipse change
 
 - type: humanoidBaseSprite
   id: MobMantidaeHeadMale
@@ -91,13 +92,13 @@
   id: MobMantidaeHeadFemale
   baseSprite:
     sprite: _Umbra/Mobs/Species/Mantidae/parts.rsi
-    state: head_m_3 #change
+    state: head_m_3 # Eclipse change
 
 - type: humanoidBaseSprite
   id: MobMantidaeTorso
   baseSprite:
     sprite: _Umbra/Mobs/Species/Mantidae/parts.rsi
-    state: torso_m_2 #change
+    state: torso_m_2 # Eclipse change
 
 - type: humanoidBaseSprite
   id: MobMantidaeTorsoMale
@@ -109,7 +110,7 @@
   id: MobMantidaeTorsoFemale
   baseSprite:
     sprite: _Umbra/Mobs/Species/Mantidae/parts.rsi
-    state: torso_m_2 #change
+    state: torso_m_2 # Eclipse change
 
 - type: humanoidBaseSprite
   id: MobMantidaeLLeg
@@ -158,3 +159,10 @@
   baseSprite:
     sprite: _Umbra/Mobs/Species/Mantidae/parts.rsi
     state: r_foot
+
+# Eclipse Change
+- type: humanoidBaseSprite
+  id: MobMantidaeTail
+  baseSprite:
+    sprite: _Eclipse/Mobs/Customization/Mantidae/tail_markings.rsi
+    state: mantidae-tail
