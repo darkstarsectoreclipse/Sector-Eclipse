@@ -98,19 +98,19 @@
   id: MobMantidaeTorso
   baseSprite:
     sprite: _Umbra/Mobs/Species/Mantidae/parts.rsi
-    state: torso_m_2 # Eclipse change
+    state: torso_m_3 # Eclipse change
 
 - type: humanoidBaseSprite
   id: MobMantidaeTorsoMale
   baseSprite:
     sprite: _Umbra/Mobs/Species/Mantidae/parts.rsi
-    state: torso_m_2
+    state: torso_m_3 # Eclipse change
 
 - type: humanoidBaseSprite
   id: MobMantidaeTorsoFemale
   baseSprite:
     sprite: _Umbra/Mobs/Species/Mantidae/parts.rsi
-    state: torso_m_2 # Eclipse change
+    state: torso_m_3 # Eclipse change
 
 - type: humanoidBaseSprite
   id: MobMantidaeLLeg
@@ -122,7 +122,7 @@
   id: MobMantidaeLHand
   baseSprite:
     sprite: _Umbra/Mobs/Species/Mantidae/parts.rsi
-    state: l_hand
+    state: l_hand_m_2 # Eclipse change
 
 - type: humanoidBaseSprite
   id: MobMantidaeLArm
@@ -146,7 +146,7 @@
   id: MobMantidaeRHand
   baseSprite:
     sprite: _Umbra/Mobs/Species/Mantidae/parts.rsi
-    state: r_hand
+    state: r_hand_m_2 # Eclipse change
 
 - type: humanoidBaseSprite
   id: MobMantidaeRArm

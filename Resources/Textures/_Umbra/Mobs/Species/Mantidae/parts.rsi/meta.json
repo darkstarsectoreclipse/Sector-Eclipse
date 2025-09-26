@@ -30,6 +30,10 @@
       "name": "l_hand",
       "directions": 4
     },
+      {
+          "name": "l_hand_m_2",
+          "directions": 4
+      },
     {
       "name": "l_leg",
       "directions": 4
@@ -46,6 +50,10 @@
       "name": "r_hand",
       "directions": 4
     },
+      {
+          "name": "r_hand_m_2",
+          "directions": 4
+      },
     {
       "name": "r_leg",
       "directions": 4
@@ -71,7 +79,15 @@
           "directions": 4
       },
       {
+          "name": "head_m_4",
+          "directions": 4
+      },
+      {
           "name": "torso_m_2",
+          "directions": 4
+      },
+      {
+          "name": "torso_m_3",
           "directions": 4
       }
   ]
