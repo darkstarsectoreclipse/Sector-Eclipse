@@ -41,6 +41,10 @@
         {
             "name": "equipped-MASK-mantidae",
             "directions": 4
+        },
+        {
+            "name": "equipped-MASK-mantidae-old",
+            "directions": 4
         }
     ]
 }

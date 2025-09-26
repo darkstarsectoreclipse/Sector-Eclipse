@@ -79,37 +79,37 @@
   id: MobMantidaeHead
   baseSprite:
     sprite: _Umbra/Mobs/Species/Mantidae/parts.rsi
-    state: head_m
+    state: head_m_3 #change
 
 - type: humanoidBaseSprite
   id: MobMantidaeHeadMale
   baseSprite:
     sprite: _Umbra/Mobs/Species/Mantidae/parts.rsi
-    state: head_m
+    state: head_m_3
 
 - type: humanoidBaseSprite
   id: MobMantidaeHeadFemale
   baseSprite:
     sprite: _Umbra/Mobs/Species/Mantidae/parts.rsi
-    state: head_f
+    state: head_m_3 #change
 
 - type: humanoidBaseSprite
   id: MobMantidaeTorso
   baseSprite:
     sprite: _Umbra/Mobs/Species/Mantidae/parts.rsi
-    state: torso_m
+    state: torso_m_2 #change
 
 - type: humanoidBaseSprite
   id: MobMantidaeTorsoMale
   baseSprite:
     sprite: _Umbra/Mobs/Species/Mantidae/parts.rsi
-    state: torso_m
+    state: torso_m_2
 
 - type: humanoidBaseSprite
   id: MobMantidaeTorsoFemale
   baseSprite:
     sprite: _Umbra/Mobs/Species/Mantidae/parts.rsi
-    state: torso_f
+    state: torso_m_2 #change
 
 - type: humanoidBaseSprite
   id: MobMantidaeLLeg

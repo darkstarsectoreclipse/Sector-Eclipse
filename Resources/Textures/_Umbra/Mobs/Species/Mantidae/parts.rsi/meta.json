@@ -61,6 +61,18 @@
     {
       "name": "eyes",
       "directions": 4
-    }
+    },
+      {
+          "name": "head_m_2",
+          "directions": 4
+      },
+      {
+          "name": "head_m_3",
+          "directions": 4
+      },
+      {
+          "name": "torso_m_2",
+          "directions": 4
+      }
   ]
 }
