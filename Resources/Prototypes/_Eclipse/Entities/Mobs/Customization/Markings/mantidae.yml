@@ -18,11 +18,3 @@
     state: head_stripes
 
 # Tail Markings
-- type: marking
-  id: MantidaeTail
-  bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [ Mantidae ]
-  sprites: # TODO : separate inner / outer tail
-  - sprite: _Eclipse/Mobs/Customization/Mantidae/tail_markings.rsi
-    state: mantidae-tail

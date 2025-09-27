@@ -31,7 +31,7 @@
     heatDamageThreshold: 325
     coldDamageThreshold: 285
     currentTemperature: 310.15
-  - type: TemperatureSpeed 
+  - type: TemperatureSpeed
     thresholds:
       301: 0.8
       295: 0.6
@@ -66,8 +66,8 @@
     allowedEmotes: ['Click', 'Chitter']
   - type: Vocal
     sounds:
-      Male: Mantidae 
-      Female: Mantidae  
+      Male: Mantidae
+      Female: Mantidae
       Unsexed: Mantidae
   - type: MantidaeAccent
   - type: TypingIndicator
@@ -91,14 +91,14 @@
       - map: [ "shoes" ]
       - map: [ "ears" ]
       - map: [ "outerClothing" ]
+      - map: [ "enum.HumanoidVisualLayers.Tail" ]
       - map: [ "eyes" ]
       - map: [ "belt" ]
       - map: [ "id" ]
-      - map: [ "enum.HumanoidVisualLayers.Tail" ] 
       - map: [ "neck" ]
       - map: [ "back" ]
       - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
-      - map: [ "enum.HumanoidVisualLayers.Hair" ] 
+      - map: [ "enum.HumanoidVisualLayers.Hair" ]
       - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
       - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
       - map: [ "mask" ]
