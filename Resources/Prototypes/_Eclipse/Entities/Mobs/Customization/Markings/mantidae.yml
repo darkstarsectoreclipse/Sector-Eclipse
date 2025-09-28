@@ -1,0 +1,20 @@
+# Head Markings
+- type: marking
+  id: MantidaeHeadShade
+  bodyPart: Head
+  markingCategory: Head
+  speciesRestriction: [Mantidae]
+  sprites:
+  - sprite: _Umbra/Mobs/Customization/Mantidae/mantidae.rsi
+    state: head_shade
+
+- type: marking
+  id: MantidaeHeadStripes
+  bodyPart: Head
+  markingCategory: Head
+  speciesRestriction: [Mantidae]
+  sprites:
+  - sprite: _Umbra/Mobs/Customization/Mantidae/mantidae.rsi
+    state: head_stripes
+
+# Tail Markings

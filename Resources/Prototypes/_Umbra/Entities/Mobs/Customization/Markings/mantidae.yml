@@ -1,10 +1,11 @@
+# Eclipse change : resprite of the specie
 - type: marking
   id: MantidaeLeftScytheDefault
   bodyPart: LHand
   markingCategory: Arms
   speciesRestriction: [Mantidae]
   sprites:
-  - sprite: _Umbra/Mobs/Customization/Mantidae/mantidae.rsi
+  - sprite: _Eclipse/Mobs/Customization/Mantidae/scythes.rsi
     state: l_default
 
 - type: marking
@@ -13,7 +14,7 @@
   markingCategory: Arms
   speciesRestriction: [Mantidae]
   sprites:
-  - sprite: _Umbra/Mobs/Customization/Mantidae/mantidae.rsi
+  - sprite: _Eclipse/Mobs/Customization/Mantidae/scythes.rsi
     state: r_default
 
 - type: marking
@@ -105,7 +106,7 @@
   sprites:
   - sprite: _Umbra/Mobs/Customization/Mantidae/mantidae.rsi
     state: r_empty
-       
+
 - type: marking
   id: MantidaeAntennaeDefault
   bodyPart: HeadTop
