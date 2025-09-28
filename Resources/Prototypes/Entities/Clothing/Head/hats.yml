@@ -299,6 +299,7 @@
   - type: IdentityBlocker
   - type: IngestionBlocker
 
+# Eclipse Change, put this as a separate entity in a Eclipse file right after testing !
 - type: entity
   parent: [ ClothingHeadBase, BaseCentcommContraband ]
   id: ClothingHeadHatCentcom

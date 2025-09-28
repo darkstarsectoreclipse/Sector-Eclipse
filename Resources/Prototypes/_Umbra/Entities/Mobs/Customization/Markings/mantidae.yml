@@ -23,7 +23,7 @@
   markingCategory: Arms
   speciesRestriction: [Mantidae]
   sprites:
-  - sprite: _Umbra/Mobs/Customization/Mantidae/mantidae.rsi
+  - sprite: _Eclipse/Mobs/Customization/Mantidae/scythes.rsi
     state: l_curved
 
 - type: marking
@@ -32,7 +32,7 @@
   markingCategory: Arms
   speciesRestriction: [Mantidae]
   sprites:
-  - sprite: _Umbra/Mobs/Customization/Mantidae/mantidae.rsi
+  - sprite: _Eclipse/Mobs/Customization/Mantidae/scythes.rsi
     state: r_curved
 
 - type: marking
@@ -41,7 +41,7 @@
   markingCategory: Arms
   speciesRestriction: [Mantidae]
   sprites:
-  - sprite: _Umbra/Mobs/Customization/Mantidae/mantidae.rsi
+  - sprite: _Eclipse/Mobs/Customization/Mantidae/scythes.rsi
     state: l_short
 
 - type: marking
@@ -50,7 +50,7 @@
   markingCategory: Arms
   speciesRestriction: [Mantidae]
   sprites:
-  - sprite: _Umbra/Mobs/Customization/Mantidae/mantidae.rsi
+  - sprite: _Eclipse/Mobs/Customization/Mantidae/scythes.rsi
     state: r_short
 
 - type: marking
@@ -59,7 +59,7 @@
   markingCategory: Arms
   speciesRestriction: [Mantidae]
   sprites:
-  - sprite: _Umbra/Mobs/Customization/Mantidae/mantidae.rsi
+  - sprite: _Eclipse/Mobs/Customization/Mantidae/scythes.rsi
     state: l_spiked
 
 - type: marking
@@ -68,7 +68,7 @@
   markingCategory: Arms
   speciesRestriction: [Mantidae]
   sprites:
-  - sprite: _Umbra/Mobs/Customization/Mantidae/mantidae.rsi
+  - sprite: _Eclipse/Mobs/Customization/Mantidae/scythes.rsi
     state: r_spiked
 
 - type: marking
@@ -77,7 +77,7 @@
   markingCategory: Arms
   speciesRestriction: [Mantidae]
   sprites:
-    - sprite: _Umbra/Mobs/Customization/Mantidae/mantidae.rsi
+    - sprite: _Eclipse/Mobs/Customization/Mantidae/scythes.rsi
       state: l_inverted
 
 - type: marking
@@ -86,7 +86,7 @@
   markingCategory: Arms
   speciesRestriction: [Mantidae]
   sprites:
-    - sprite: _Umbra/Mobs/Customization/Mantidae/mantidae.rsi
+    - sprite: _Eclipse/Mobs/Customization/Mantidae/scythes.rsi
       state: r_inverted
 
 - type: marking

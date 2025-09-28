@@ -72,7 +72,7 @@
   - type: MantidaeAccent
   - type: TypingIndicator
     proto: spider
-  - type: Sprite # I'd prefer if these maps were better. Insert map pun here.
+  - type: Sprite # I'd prefer if these maps were better. Insert map pun here. Eclipse Addendum : sadly, pending layering rework, scythes will always look goofy with backpacks.
     layers:
       - map: [ "enum.HumanoidVisualLayers.Chest" ]
       - map: [ "enum.HumanoidVisualLayers.Head" ]
@@ -91,11 +91,11 @@
       - map: [ "shoes" ]
       - map: [ "ears" ]
       - map: [ "outerClothing" ]
-      - map: [ "enum.HumanoidVisualLayers.Tail" ]
       - map: [ "eyes" ]
       - map: [ "belt" ]
       - map: [ "id" ]
       - map: [ "neck" ]
+      - map: [ "enum.HumanoidVisualLayers.Tail"] # Eclipse change : added tail !
       - map: [ "back" ]
       - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
       - map: [ "enum.HumanoidVisualLayers.Hair" ]
