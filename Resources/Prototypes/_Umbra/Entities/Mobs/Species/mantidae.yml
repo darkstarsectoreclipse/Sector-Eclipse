@@ -45,13 +45,14 @@
   # Damage (Others)
   - type: MeleeWeapon
     soundHit:
-      collection: Punch
+      path: /Audio/Weapons/bladeslice.ogg # Eclipse change : they quite litteraly slice with a blade lol
+      #collection: Punch
     angle: 30
-    animation: WeaponArcFist
+    animation: WeaponArcFist # change that !
     damage:
       types:
-        Blunt: 5
-        Slash: 2
+        Blunt: 2 # Eclipse change : more slash, less blunt, they are praying mantis with huge scythes (total remain the same as previously) !
+        Slash: 5
   # Visual & Audio
   - type: DamageVisuals
     damageOverlayGroups:

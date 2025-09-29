@@ -27,3 +27,14 @@
     tags:
     - PetWearable
     - CorgiWearable
+
+- type: entity
+  parent: [ClothingHeadBase, BaseCentcommContraband]
+  id: ClothingHeadBeretDarkStar
+  name: Dark Star brand beret
+  description: Feels good being the king's boss.
+  components:
+      - type: Sprite
+        sprite: _Eclipse/Clothing/Head/Hats/darkstar_beret.rsi
+      - type: Clothing
+        sprite: _Eclipse/Clothing/Head/Hats/darkstar_beret.rsi

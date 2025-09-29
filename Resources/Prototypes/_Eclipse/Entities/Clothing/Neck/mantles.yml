@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckMantleDarkStarCommand
+  name: dark star command mantle
+  description: This costed a lot of shareholders money, you know !
+  components:
+  - type: Sprite
+    sprite: _Eclipse/Clothing/Neck/Mantles/darkstarmantle.rsi
+  - type: StealTarget
+    stealGroup: HeadCloak # leaving this here because I suppose it might be interesting?

@@ -2,9 +2,20 @@
   parent: ClothingNeckBase
   id: ClothingNeckCloakDarkStarFormal
   name: dark star official's formal cloak
-  description: A deep blue cloak with silver trimmings. Truly a boos cloak.
+  description: To impress employees and shareholders !
   components:
   - type: Sprite
     sprite: _Eclipse/Clothing/Neck/Cloaks/darkstarformal.rsi
+  - type: StealTarget
+    stealGroup: HeadCloak # leaving this here because I suppose it might be interesting?
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakDarkStarCommand
+  name: dark star command cloak
+  description: To impress employees and shareholders !
+  components:
+  - type: Sprite
+    sprite: _Eclipse/Clothing/Neck/Cloaks/darkstarcommand.rsi
   - type: StealTarget
     stealGroup: HeadCloak # leaving this here because I suppose it might be interesting?

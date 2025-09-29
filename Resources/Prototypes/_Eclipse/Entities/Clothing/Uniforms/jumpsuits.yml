@@ -1,0 +1,53 @@
+# Dark Star command uniform
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitDarkStarCommand
+  name: Dark Star command uniform
+  description: The uniform of a high ranking company officer
+  components:
+  - type: Sprite
+    sprite: _Eclipse/Clothing/Uniforms/Jumpsuit/darkstarcommand.rsi
+    layers:
+    - state: icon
+    - state: icon
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left
+      right:
+      - state: inhand-right
+      - state: inhand-right
+  - type: Clothing
+    sprite: _Eclipse/Clothing/Uniforms/Jumpsuit/darkstarcommand.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING
+
+# Dark Star formal command uniform
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitDarkStarFormal
+  name: Dark Star formal command uniform
+  description: The uniform of a high ranking and dandy company officer
+  components:
+  - type: Sprite
+    sprite: _Eclipse/Clothing/Uniforms/Jumpsuit/darkstarformal.rsi
+    layers:
+    - state: icon
+    - state: icon
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left
+      right:
+      - state: inhand-right
+      - state: inhand-right
+  - type: Clothing
+    sprite: _Eclipse/Clothing/Uniforms/Jumpsuit/darkstarformal.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING
