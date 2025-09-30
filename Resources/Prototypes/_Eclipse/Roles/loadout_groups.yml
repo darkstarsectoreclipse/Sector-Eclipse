@@ -1,0 +1,31 @@
+# Sector Command
+- type: loadoutGroup
+  id: SectorCommanderHat
+  name: Sector Commander Hat
+  minLimit: 0
+  loadouts:
+  - CommanderCap
+  - CommanderBeret
+
+- type: loadoutGroup
+  id: SectorCommanderUniform
+  name: Sector Commander Uniform
+  minLimit: 1
+  loadouts:
+  - CommanderJumpsuit
+  - CommanderFormalJumpsuit
+
+- type: loadoutGroup
+  id: SectorCommanderNeck
+  name: Sector Commander Neck
+  minLimit: 0
+  loadouts:
+  - CommanderCloack
+  - CommanderMantle
+
+- type: loadoutGroup
+  id: SectorCommanderShoes
+  name: loadout-group-formal-shoes
+  minLimit: 1
+  loadouts:
+  - LaceupShoes

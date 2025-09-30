@@ -1,0 +1,40 @@
+# NOTE : if not able to lock to Admin, just lock it under an impossible amount of time played.
+- type: job
+  id: SectorCommander
+  name: job-name-sector-commander
+  description: Ensure Dark Star shareholders are satisfied. At any cost.
+  playTimeTracker: JobSectorCommander
+  startingGear: SectorCommanderGear
+  icon: "JobIconSectorCommander"
+  supervisors: "no one."
+  canBeAntag: false
+  requireAdminNotify: true
+  overrideConsoleVisibility: false
+  setPreference: false
+  accessGroups:
+  - AllAccess
+  access:
+  - CentralCommand
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: SectorCommanderGear
+  equipment:
+    # shoes: ClothingShoesBootsLaceup | CD, removed due to loadout addtion.
+    id: CentcomPDA
+    ears: ClothingHeadsetAltCentCom
+    belt: WeaponPistolN1984
+    eyes: ClothingEyesGlassesCommand
+
+- type: chameleonOutfit
+  id: SectorCommanderChameleonOutfit
+  job: Lawyer
+  equipment:
+    head: ClothingHeadHatBowlerHat
+    eyes: ClothingEyesGlassesCheapSunglasses
+    mask: ClothingMaskBreath
+    neck: ClothingNeckLawyerbadge
+    outerClothing: ClothingOuterWinterColorBlack
+    gloves: ClothingHandsGlovesColorBlack

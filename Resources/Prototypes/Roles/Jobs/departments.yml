@@ -150,3 +150,13 @@
   - Zookeeper
   - Psychologist
   primary: false
+
+# Eclipse addition, all roles in here are custom
+- type: department
+  id : SectorCommand
+  name : department-SectorCommand
+  description : department-SectorCommand-description
+  color: "#230030"
+  roles:
+  - SectorCommander
+  - JDR

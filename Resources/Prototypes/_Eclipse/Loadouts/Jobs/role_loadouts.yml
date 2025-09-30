@@ -1,0 +1,23 @@
+# For now it's a copy of the roleLoadout for the Lawyer, could change in the future (maybe ?)
+- type: roleLoadout
+  id: JobJDR
+  groups:
+  - SlacksEnvirosuit
+  - GroupTankHarness
+  - LawyerNeck
+  - LawyerJumpsuit
+  - CommonBackpack
+  - FormalShoes
+  - SecurityGlassesOrHud
+  - Survival
+  - Trinkets
+  - GroupSpeciesBreathTool
+  - PersonalItemsJobAgnostic
+
+- type: roleLoadout
+  id: JobSectorCommander
+  groups:
+  - SectorCommanderHat
+  - SectorCommanderUniform
+  - SectorCommanderNeck
+  - SectorCommanderShoes

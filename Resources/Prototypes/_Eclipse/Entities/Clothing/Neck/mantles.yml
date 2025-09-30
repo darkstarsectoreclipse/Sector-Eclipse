@@ -2,7 +2,7 @@
   parent: ClothingNeckBase
   id: ClothingNeckMantleDarkStarCommand
   name: dark star command mantle
-  description: This costed a lot of shareholders money, you know !
+  description: This costed a lot of shareholders money
   components:
   - type: Sprite
     sprite: _Eclipse/Clothing/Neck/Mantles/darkstarmantle.rsi
