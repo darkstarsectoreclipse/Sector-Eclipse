@@ -3,7 +3,7 @@
   name: job-name-justice-dep-repr
   description: job-description-justice-dep-repr
   playTimeTracker: JobJDR
-  startingGear: LawyerGear # TODO : later add custom startingGear (justice dep. fax machine)
+  startingGear: JDRGear # TODO : later add custom startingGear (justice dep. fax machine)
   icon: "JobIconJDR"
   supervisors: job-supervisors-justice
   canBeAntag: false
@@ -29,10 +29,12 @@
     ears: ClothingHeadsetSecurity
     # eyes:
   inhand:
-  - BriefcaseBrownFilled
+  #- BriefcaseBrownFilled
+  - BriefcaseBrownJDR
   storage:
     back:
-    - RubberStampLawyer
+    - RubberStampJDR
+    #- RubberStampLawyer
     - BookSpaceLaw
 
 - type: chameleonOutfit

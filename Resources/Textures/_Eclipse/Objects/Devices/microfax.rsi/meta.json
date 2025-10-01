@@ -1,0 +1,25 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Microfax made by StudMuffin",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "icon"
+        },
+        {
+            "name": "idle",
+            "delays": [
+                [
+                    0.4,
+                    0.4,
+                    0.4,
+                    0.4
+                ]
+            ]
+        }
+    ]
+}

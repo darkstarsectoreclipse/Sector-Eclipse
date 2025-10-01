@@ -17,4 +17,22 @@
   - sprite: _Umbra/Mobs/Customization/Mantidae/mantidae.rsi
     state: head_stripes
 
-# Tail Markings
+# Inner Caparace Markings
+- type: marking
+  id: MantidaeTailInnerCarapace
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Mantidae]
+  sprites:
+  - sprite: _Eclipse/Mobs/Customization/Mantidae/inner_carapace.rsi
+    state: inner_tail
+
+- type: marking
+  id: MantidaeTorsoInnerCarapace
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [Mantidae]
+  sprites:
+  - sprite: _Eclipse/Mobs/Customization/Mantidae/inner_carapace.rsi
+    state: inner_torso
+

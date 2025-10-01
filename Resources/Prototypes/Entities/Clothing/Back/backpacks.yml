@@ -129,7 +129,7 @@
   description: A backpack specially designed to repel stains and hazardous liquids.
   components:
   - type: Sprite
-    sprite: Clothing/Back/Backpacks/chemistry.rsi
+    sprite: _Eclipse/Clothing/Back/Backpacks/chemistry.rsi # Clothing/Back/Backpacks/chemistry.rsi Eclipse change
 
 - type: entity
   parent: ClothingBackpack

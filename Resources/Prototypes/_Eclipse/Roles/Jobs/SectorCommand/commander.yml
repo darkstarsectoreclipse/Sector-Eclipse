@@ -10,7 +10,8 @@
   canBeAntag: false
   requireAdminNotify: true
   overrideConsoleVisibility: false
-  setPreference: false
+  whitelisted: true
+  # setPreference: false
   accessGroups:
   - AllAccess
   access:

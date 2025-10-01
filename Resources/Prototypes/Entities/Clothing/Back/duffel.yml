@@ -88,7 +88,7 @@
   description: A large duffel bag for holding extra beakers and test tubes.
   components:
   - type: Sprite
-    sprite: Clothing/Back/Duffels/chemistry.rsi
+    sprite: _Eclipse/Clothing/Back/Duffels/chemistry.rsi # Eclipse change Clothing/Back/Duffels/chemistry.rsi
 
 - type: entity
   parent: ClothingBackpackDuffel

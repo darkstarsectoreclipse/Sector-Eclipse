@@ -1,1 +1,1 @@
-job-supervisors-justice = the central Justice department
+job-supervisors-justice = the Justice Department

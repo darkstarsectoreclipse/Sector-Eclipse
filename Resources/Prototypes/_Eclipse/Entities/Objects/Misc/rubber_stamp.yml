@@ -1,0 +1,11 @@
+- type: entity
+  name: justice dep. representative rubber stamp
+  parent: [RubberStampBase]
+  id: RubberStampJDR
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-jdr
+    stampedColor: "#630061"
+    stampState: "paper_stamp-cap"
+  - type: Sprite
+    state: stamp-cap
