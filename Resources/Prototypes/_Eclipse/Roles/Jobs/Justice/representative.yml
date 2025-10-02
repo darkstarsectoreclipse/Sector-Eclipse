@@ -30,7 +30,8 @@
     # eyes:
   inhand:
   #- BriefcaseBrownFilled
-  - BriefcaseBrownJDR
+  #- BriefcaseBrownJDR
+  - MicroFax # now appear as a briefcase when in hand, making old filledbriefcase useless.
   storage:
     back:
     - RubberStampJDR

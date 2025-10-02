@@ -32,7 +32,7 @@
   - type: Item
     sprite: _Eclipse/Objects/Devices/microfax.rsi
     state: icon
-    size:  Huge
+    size:  Ginormous
   - type: DeviceNetwork
     deviceNetId: Wireless
     receiveFrequencyId: Fax
