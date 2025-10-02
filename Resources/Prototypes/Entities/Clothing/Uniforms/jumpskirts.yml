@@ -82,9 +82,9 @@
   description: There's some odd stains on this jumpskirt. Hm.
   components:
   - type: Sprite
-    sprite: Clothing/Uniforms/Jumpskirt/chemistry.rsi
+    sprite: _Eclipse/Clothing/Uniforms/Jumpskirt/chemistry.rsi # Eclipse change Clothing/Uniforms/Jumpskirt/chemistry.rsi
   - type: Clothing
-    sprite: Clothing/Uniforms/Jumpskirt/chemistry.rsi
+    sprite: _Eclipse/Clothing/Uniforms/Jumpskirt/chemistry.rsi # Clothing/Uniforms/Jumpskirt/chemistry.rsi
 
 - type: entity
   parent: ClothingUniformSkirtBase

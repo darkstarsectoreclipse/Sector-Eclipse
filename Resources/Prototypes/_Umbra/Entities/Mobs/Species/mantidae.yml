@@ -45,13 +45,14 @@
   # Damage (Others)
   - type: MeleeWeapon
     soundHit:
-      collection: Punch
+      path: /Audio/Weapons/bladeslice.ogg # Eclipse change : they quite litteraly slice with a blade lol
+      #collection: Punch
     angle: 30
-    animation: WeaponArcFist
+    animation: WeaponArcFist # change that !
     damage:
       types:
-        Blunt: 5
-        Slash: 2
+        Blunt: 2 # Eclipse change : more slash, less blunt, they are praying mantis with huge scythes (total remain the same as previously) !
+        Slash: 5
   # Visual & Audio
   - type: DamageVisuals
     damageOverlayGroups:
@@ -72,7 +73,7 @@
   - type: MantidaeAccent
   - type: TypingIndicator
     proto: spider
-  - type: Sprite # I'd prefer if these maps were better. Insert map pun here.
+  - type: Sprite # I'd prefer if these maps were better. Insert map pun here. Eclipse Addendum : sadly, pending layering rework, scythes will always look goofy with backpacks.
     layers:
       - map: [ "enum.HumanoidVisualLayers.Chest" ]
       - map: [ "enum.HumanoidVisualLayers.Head" ]
@@ -91,11 +92,11 @@
       - map: [ "shoes" ]
       - map: [ "ears" ]
       - map: [ "outerClothing" ]
-      - map: [ "enum.HumanoidVisualLayers.Tail" ]
       - map: [ "eyes" ]
       - map: [ "belt" ]
       - map: [ "id" ]
       - map: [ "neck" ]
+      - map: [ "enum.HumanoidVisualLayers.Tail"] # Eclipse change : added tail !
       - map: [ "back" ]
       - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
       - map: [ "enum.HumanoidVisualLayers.Hair" ]
@@ -114,6 +115,7 @@
         sprite: "_Umbra/Effects/creampie.rsi"
         state: "creampie_mantidae"
         visible: false
+  # Eclipse change : Moth work well for now
   - type: Inventory
     speciesId: mantidae
     displacements:
@@ -122,21 +124,32 @@
           32:
             sprite: _Umbra/Mobs/Species/Mantidae/displacement.rsi
             state: eyes
-      head:
-        sizeMaps:
-          32:
-            sprite: _Umbra/Mobs/Species/Mantidae/displacement.rsi
-            state: head
-      ears:
-        sizeMaps:
-          32:
-            sprite: _Umbra/Mobs/Species/Mantidae/displacement.rsi
-            state: ears
       jumpsuit:
         sizeMaps:
           32:
-            sprite: _Umbra/Mobs/Species/Mantidae/displacement.rsi
-            state: jumpsuit
+            sprite: Mobs/Species/Moth/displacement.rsi
+            state: jumpsuit-male
+      back:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Moth/displacement.rsi
+            state: back
+      outerClothing:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Moth/displacement.rsi
+            state: outerclothing
+      gloves:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Moth/displacement.rsi
+            state: hand
+      shoes:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Moth/displacement.rsi
+            state: shoes
+
 
 - type: entity
   parent: BaseSpeciesDummy
@@ -146,27 +159,38 @@
   - type: HumanoidAppearance
     species: Mantidae
   - type: Inventory
-    speciesId: Mantidae
+    speciesId: mantidae
     displacements:
-      ears:
-        sizeMaps:
-          32:
-            sprite: _Umbra/Mobs/Species/Mantidae/displacement.rsi
-            state: ears
       eyes:
         sizeMaps:
           32:
             sprite: _Umbra/Mobs/Species/Mantidae/displacement.rsi
             state: eyes
-      head:
-        sizeMaps:
-          32:
-            sprite: _Umbra/Mobs/Species/Mantidae/displacement.rsi
-            state: head
       jumpsuit:
         sizeMaps:
           32:
-            sprite: _Umbra/Mobs/Species/Mantidae/displacement.rsi
-            state: jumpsuit
+            sprite: Mobs/Species/Moth/displacement.rsi
+            state: jumpsuit-male
+      back:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Moth/displacement.rsi
+            state: back
+      outerClothing:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Moth/displacement.rsi
+            state: outerclothing
+      gloves:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Moth/displacement.rsi
+            state: hand
+      shoes:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Moth/displacement.rsi
+            state: shoes
+
 
 #O,,O

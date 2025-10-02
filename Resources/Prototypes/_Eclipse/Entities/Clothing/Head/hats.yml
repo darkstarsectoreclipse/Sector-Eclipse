@@ -1,0 +1,40 @@
+- type: entity
+  parent: [ ClothingHeadBase, BaseCentcommContraband ]
+  id: ClothingHeadHatDarkStar
+  name: Dark Star brand hat
+  description: Feels good being the king's boss.
+  components:
+  - type: Sprite
+    sprite: _Eclipse/Clothing/Head/Hats/darkstar_hat.rsi
+  - type: Clothing
+    sprite: _Eclipse/Clothing/Head/Hats/darkstar_hat.rsi
+  - type: Tag
+    tags:
+    - PetWearable
+    - CorgiWearable
+
+- type: entity
+  parent: [ ClothingHeadBase, BaseCentcommContraband ]
+  id: ClothingHeadCapDarkStar
+  name: Dark Star brand cap
+  description: Feels good being the king's boss.
+  components:
+  - type: Sprite
+    sprite: _Eclipse/Clothing/Head/Hats/darkstar_cap.rsi
+  - type: Clothing
+    sprite: _Eclipse/Clothing/Head/Hats/darkstar_cap.rsi
+  - type: Tag
+    tags:
+    - PetWearable
+    - CorgiWearable
+
+- type: entity
+  parent: [ClothingHeadBase, BaseCentcommContraband]
+  id: ClothingHeadBeretDarkStar
+  name: Dark Star brand beret
+  description: Feels good being the king's boss.
+  components:
+      - type: Sprite
+        sprite: _Eclipse/Clothing/Head/Hats/darkstar_beret.rsi
+      - type: Clothing
+        sprite: _Eclipse/Clothing/Head/Hats/darkstar_beret.rsi

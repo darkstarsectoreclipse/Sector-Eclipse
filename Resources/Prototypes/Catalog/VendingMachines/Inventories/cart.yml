@@ -20,6 +20,7 @@
     EncryptionKeyScience: 3 #CD change from 2 to 3.
     EncryptionKeySecurity: 3 #CD change from 1 to 3.
     EncryptionKeyService: 3
+    CreditCardCartridge: 5 # Eclipse addition.
   contrabandInventory:
     BalloonNT: 2
     LuxuryPen: 1

@@ -2,7 +2,7 @@ namespace Content.Server._Eclipse.Bank;
 
 public sealed class WageSystem
 {
-    [Dependency] private BankAccountSystem _bankAccountSystem = default!;
+    [Dependency] private BankSystem _bankSystem = default!;
 
 
 }

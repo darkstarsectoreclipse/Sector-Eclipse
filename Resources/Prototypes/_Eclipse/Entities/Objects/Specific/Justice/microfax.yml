@@ -1,0 +1,51 @@
+- type: entity
+  id: MicroFax
+  parent: BaseItem
+  name: microfax
+  description: All the crushing weight of bureaucracy in a small package.
+  components:
+  - type: Sprite
+    sprite: _Eclipse/Objects/Devices/microfax.rsi
+    state: idle
+    drawdepth: SmallObjects
+  - type: Icon
+    sprite: _Eclipse/Objects/Devices/microfax.rsi
+    state: icon
+  - type: ActivatableUI
+    key: enum.FaxUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.FaxUiKey.Key:
+        type: FaxBoundUi
+  - type: FaxMachine
+    name: "Justice Dep. Representative"
+    paperSlot:
+      insertSound: /Audio/Machines/scanning.ogg
+      ejectSound: /Audio/Machines/tray_eject.ogg
+      whitelist:
+        components:
+        - FaxableObject # please don't attempt to fax Hammy to the justice dep. - StudMuffin
+  - type: ItemSlots
+  - type: ContainerContainer
+    containers:
+      Paper: !type:ContainerSlot
+  - type: Item
+    sprite: _Eclipse/Objects/Devices/microfax.rsi
+    state: icon
+    size:  Huge
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: Fax
+    transmitFrequencyId: Fax
+  # the functionalities of FaxMachine depend on the APC component, we need to do that or it won't send faxes. - StudMuffin
+  - type: ApcPowerReceiver
+    powerLoad: 0
+
+# a suitcase containing a microfax, for the justice dep. representative
+- type: entity
+  id: BriefcaseBrownJDR
+  parent: BriefcaseBrown
+  components:
+  - type: StorageFill
+    contents:
+    - id: MicroFax

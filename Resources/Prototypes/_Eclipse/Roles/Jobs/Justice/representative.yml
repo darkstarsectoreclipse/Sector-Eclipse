@@ -1,0 +1,49 @@
+- type: job
+  id: JDR
+  name: job-name-justice-dep-repr
+  description: job-description-justice-dep-repr
+  playTimeTracker: JobJDR
+  startingGear: JDRGear # TODO : later add custom startingGear (justice dep. fax machine)
+  icon: "JobIconJDR"
+  supervisors: job-supervisors-justice
+  canBeAntag: false
+  OverrideConsoleVisibility: false # On-station personnel don't have the authority to appoint one.
+  access:
+  - Command
+  - CentralCommand
+  - Brig
+  - Maintenance
+  - Lawyer
+  - Security
+  - GenpopEnter
+  - GenpopLeave
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: JDRGear
+  equipment:
+    # shoes: ClothingShoesBootsLaceup | CD, removed due to loadout addtion.
+    id: LawyerPDA
+    ears: ClothingHeadsetSecurity
+    # eyes:
+  inhand:
+  #- BriefcaseBrownFilled
+  - BriefcaseBrownJDR
+  storage:
+    back:
+    - RubberStampJDR
+    #- RubberStampLawyer
+    - BookSpaceLaw
+
+- type: chameleonOutfit
+  id: JDRChameleonOutfit
+  job: Lawyer
+  equipment:
+    head: ClothingHeadHatBowlerHat
+    eyes: ClothingEyesGlassesCheapSunglasses
+    mask: ClothingMaskBreath
+    neck: ClothingNeckLawyerbadge
+    outerClothing: ClothingOuterWinterColorBlack
+    gloves: ClothingHandsGlovesColorBlack

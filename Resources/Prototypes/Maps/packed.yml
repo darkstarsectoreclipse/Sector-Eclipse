@@ -68,3 +68,6 @@
           #silicon (3)
           StationAi: [ 1, 1 ]
           Borg: [ 2, 2 ]
+
+          # Eclipse
+          JDR: [ 1, 1 ]

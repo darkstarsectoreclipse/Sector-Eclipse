@@ -76,7 +76,7 @@
   description: A sterile satchel with chemist colours.
   components:
   - type: Sprite
-    sprite: Clothing/Back/Satchels/chemistry.rsi
+    sprite: _Eclipse/Clothing/Back/Satchels/chemistry.rsi # Eclipse change Clothing/Back/Satchels/chemistry.rsi
 
 - type: entity
   parent: ClothingBackpackSatchel

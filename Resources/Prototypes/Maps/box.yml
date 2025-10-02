@@ -68,3 +68,5 @@
             SeniorPhysician: [ 1, 1 ]
             SeniorResearcher: [ 1, 1 ]
             SeniorOfficer: [ 1, 1 ]
+            # sector Eclipse
+            JDR: [ 1, 1 ]

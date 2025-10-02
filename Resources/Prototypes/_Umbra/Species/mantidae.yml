@@ -48,9 +48,9 @@
     FacialHair:
       points: 0
       required: false
-#    Tail:
-#      points: 1
-#      required: false
+    Tail:
+      points: 1
+      required: false
     Snout:
       points: 1
       required: false
@@ -117,7 +117,7 @@
   id: MobMantidaeLLeg
   baseSprite:
     sprite: _Eclipse/Mobs/Species/Mantidae/parts.rsi
-    state: l_leg
+    state: l_leg_layering
 
 - type: humanoidBaseSprite
   id: MobMantidaeLHand
@@ -141,7 +141,7 @@
   id: MobMantidaeRLeg
   baseSprite:
     sprite: _Eclipse/Mobs/Species/Mantidae/parts.rsi
-    state: r_leg
+    state: r_leg_layering
 
 - type: humanoidBaseSprite
   id: MobMantidaeRHand
@@ -161,8 +161,9 @@
     sprite: _Eclipse/Mobs/Species/Mantidae/parts.rsi
     state: r_foot
 
+# Eclipse change : added tail !
 - type: humanoidBaseSprite
   id: MobMantidaeTail
   baseSprite:
     sprite: _Eclipse/Mobs/Species/Mantidae/parts.rsi
-    state: tail_adjusted
+    state: tail_layering

@@ -35,7 +35,7 @@
             MedicalDoctor: [ 1, 2 ]
             MedicalIntern: [ 1, 1 ]
             Paramedic: [ 1, 1 ]
-            Psychologist: [ 1, 1] 
+            Psychologist: [ 1, 1]
             #science
             ResearchDirector: [ 1, 1 ]
             Scientist: [ 1, 2 ]
@@ -55,3 +55,5 @@
             #silicon
             StationAi: [ 1, 1 ]
             Borg: [ 1, 2 ]
+            # Eclipse
+            JDR: [ 1, 1 ]

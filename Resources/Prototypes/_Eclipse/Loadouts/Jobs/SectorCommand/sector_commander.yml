@@ -1,0 +1,32 @@
+# Jumpsuit
+- type: loadout
+  id: CommanderJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitDarkStarCommand
+
+- type: loadout
+  id: CommanderFormalJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitDarkStarFormal
+
+# Head
+- type: loadout
+  id: CommanderCap
+  equipment:
+    head: ClothingHeadCapDarkStar
+
+- type: loadout
+  id: CommanderBeret
+  equipment:
+    head: ClothingHeadBeretDarkStar
+
+# Neck
+- type: loadout
+  id: CommanderCloack
+  equipment:
+    neck: ClothingNeckCloakDarkStarFormal
+
+- type: loadout
+  id: CommanderMantle
+  equipment:
+    neck: ClothingNeckMantleDarkStarCommand

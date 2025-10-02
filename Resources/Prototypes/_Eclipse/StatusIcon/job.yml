@@ -1,0 +1,13 @@
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconJDR
+  icon:
+    sprite: /Textures/_Eclipse/Interface/Misc/job_icons.rsi
+    state: JusticeDepRep
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconSectorCommander
+  icon:
+    sprite: /Textures/_Eclipse/Interface/Misc/job_icons.rsi
+    state: SectorCommander
