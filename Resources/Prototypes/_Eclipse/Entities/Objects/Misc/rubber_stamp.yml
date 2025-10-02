@@ -6,6 +6,6 @@
   - type: Stamp
     stampedName: stamp-component-stamped-name-jdr
     stampedColor: "#630061"
-    stampState: "paper_stamp-cap"
+    stampState: "paper_stamp-generic"
   - type: Sprite
-    state: stamp-cap
+    state: stamp-jdr
