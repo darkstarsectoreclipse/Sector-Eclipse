@@ -11,22 +11,7 @@
             "name": "CHEM-icon"
         },
         {
-            "name": "icon-open"
-        },
-        {
             "name": "CHEM-equipped-OUTERCLOTHING",
-            "directions": 4
-        },
-        {
-            "name": "CHEM-open-equipped-OUTERCLOTHING",
-            "directions": 4
-        },
-        {
-            "name": "CHEM-equipped-OUTERCLOTHING-vox",
-            "directions": 4
-        },
-        {
-            "name": "CHEM-open-equipped-OUTERCLOTHING-vox",
             "directions": 4
         },
         {
@@ -35,14 +20,6 @@
         },
         {
             "name": "CHEM-inhand-right",
-            "directions": 4
-        },
-        {
-            "name": "CHEM-open-inhand-left",
-            "directions": 4
-        },
-        {
-            "name": "CHEM-open-inhand-right",
             "directions": 4
         }
     ]
