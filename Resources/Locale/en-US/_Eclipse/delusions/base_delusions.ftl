@@ -47,7 +47,7 @@ delusion-benefactor-name = Ultimate Benefactor
 delusion-benefactor-desc = You are personally responsible for the well being of everyone aboard the station.
 
 delusion-poison-name = Mass Medicine Sabotage
-delusion-poison-desc = All medecine on station is laced with a slow acting lethal poison.
+delusion-poison-desc = All medicine on station is laced with a slow acting lethal poison.
 
 delusion-fashionista-name = Fashionista
 delusion-fashionista-desc = You are extremely vulnerable when you are not fashionable.
