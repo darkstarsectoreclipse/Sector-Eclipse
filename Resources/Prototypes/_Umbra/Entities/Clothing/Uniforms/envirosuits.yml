@@ -93,9 +93,9 @@
   name: chemist envirosuit
   components:
   - type: Sprite
-    sprite: _Eclipse/Clothing/Uniforms/Envirosuit/chemist.rsi # Eclipse change _Umbra/Clothing/Uniforms/Envirosuit/chemist.rsi
+    sprite: _Umbra/Clothing/Uniforms/Envirosuit/chemist.rsi
   - type: Clothing
-    sprite: _Eclipse/Clothing/Uniforms/Envirosuit/chemist.rsi # Eclipse change _Umbra/Clothing/Uniforms/Envirosuit/chemist.rsi
+    sprite: _Umbra/Clothing/Uniforms/Envirosuit/chemist.rsi
 
 - type: entity
   parent: ClothingUniformEnvirosuitBase

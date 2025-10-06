@@ -1736,7 +1736,7 @@
   - type: SpeakOnUIClosed
     pack: GenericVendGoodbyes
   - type: Sprite
-    sprite: _Eclipse/Structures/Machines/VendingMachines/chemdrobe.rsi # Structures/Machines/VendingMachines/chemdrobe.rsi
+    sprite: Structures/Machines/VendingMachines/chemdrobe.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -2215,7 +2215,7 @@
     denyState: deny
     ejectDelay: 2
   - type: Sprite
-    sprite: _Eclipse/Structures/Machines/VendingMachines/chemvend.rsi # Structures/Machines/VendingMachines/chemvend.rsi
+    sprite: Structures/Machines/VendingMachines/chemvend.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
