@@ -83,9 +83,9 @@
   name: chemist envirosuit helmet
   components:
   - type: Sprite
-    sprite: _Eclipse/Clothing/Head/Envirosuit/chemist.rsi # Eclipse change _Umbra/Clothing/Head/Envirosuit/chemist.rsi
+    sprite: _Umbra/Clothing/Head/Envirosuit/chemist.rsi
   - type: Clothing
-    sprite: _Eclipse/Clothing/Head/Envirosuit/chemist.rsi # Eclipse change _Umbra/Clothing/Head/Envirosuit/chemist.rsi
+    sprite: _Umbra/Clothing/Head/Envirosuit/chemist.rsi
 
 - type: entity
   parent: ClothingHeadEnvirosuitBase

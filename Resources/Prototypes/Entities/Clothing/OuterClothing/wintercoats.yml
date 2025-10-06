@@ -219,7 +219,7 @@
   name: chemistry winter coat
   components:
   - type: Sprite
-    sprite: _Eclipse/Clothing/OuterClothing/WinterCoats/coat_chem.rsi # Eclipse change Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
     layers:
     - state: CHEM-icon
   - type: Item
@@ -229,7 +229,7 @@
       right:
       - state: CHEM-inhand-right
   - type: Clothing
-    sprite: _Eclipse/Clothing/OuterClothing/WinterCoats/coat_chem.rsi # Eclipse change Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
     clothingVisuals:
       outerClothing:
       - state: CHEM-equipped-OUTERCLOTHING

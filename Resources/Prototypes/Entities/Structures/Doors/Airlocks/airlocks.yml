@@ -80,7 +80,7 @@
   suffix: Chemistry
   components:
   - type: Sprite
-    sprite: _Eclipse/Structures/Doors/Airlocks/Standard/chemistry.rsi # Structures/Doors/Airlocks/Standard/chemistry.rsi
+    sprite: Structures/Doors/Airlocks/Standard/chemistry.rsi
 
 - type: entity
   parent: Airlock
@@ -253,7 +253,7 @@
   suffix: Chemistry
   components:
   - type: Sprite
-    sprite: _Eclipse/Structures/Doors/Airlocks/Glass/chemistry.rsi # Structures/Doors/Airlocks/Glass/chemistry.rsi
+    sprite: Structures/Doors/Airlocks/Glass/chemistry.rsi
 
 - type: entity
   parent: AirlockMedicalGlass

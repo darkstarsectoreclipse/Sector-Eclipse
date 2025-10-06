@@ -300,9 +300,9 @@
   description: A sleak suit that protects against minor chemical spills. It has orange stripes on the shoulders
   components:
   - type: Sprite
-    sprite: _Eclipse/Clothing/OuterClothing/Coats/Labcoats/labcoat_chem.rsi # _CD/Clothing/OuterClothing/Coats/Labcoats/labcoat_chem.rsi
+    sprite: _CD/Clothing/OuterClothing/Coats/Labcoats/labcoat_chem.rsi
   - type: Clothing
-    sprite: _Eclipse/Clothing/OuterClothing/Coats/Labcoats/labcoat_chem.rsi # _CD/Clothing/OuterClothing/Coats/Labcoats/labcoat_chem.rsi
+    sprite: _CD/Clothing/OuterClothing/Coats/Labcoats/labcoat_chem.rsi
   - type: Armor
     modifiers:
       coefficients:

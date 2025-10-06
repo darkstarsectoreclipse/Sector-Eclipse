@@ -174,9 +174,9 @@
   description: There's some odd stains on this jumpsuit. Hm.
   components:
   - type: Sprite
-    sprite: _Eclipse/Clothing/Uniforms/Jumpsuit/chemistry.rsi # Clothing/Uniforms/Jumpsuit/chemistry.rsi
+    sprite: Clothing/Uniforms/Jumpsuit/chemistry.rsi
   - type: Clothing
-    sprite: _Eclipse/Clothing/Uniforms/Jumpsuit/chemistry.rsi # Clothing/Uniforms/Jumpsuit/chemistry.rsi
+    sprite: Clothing/Uniforms/Jumpsuit/chemistry.rsi
 
 - type: entity
   parent: ClothingUniformBase

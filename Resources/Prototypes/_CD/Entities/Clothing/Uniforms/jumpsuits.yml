@@ -191,9 +191,9 @@
   description: A blue-white shirt with comfortable black slacks. There is an orange armband on the left sleeve with a matching collar.
   components:
   - type: Sprite
-    sprite: _Eclipse/Clothing/Uniforms/Jumpsuit/chemist_casual.rsi # _CD/Clothing/Uniforms/Jumpsuit/Casual/chemist_casual.rsi
+    sprite: _CD/Clothing/Uniforms/Jumpsuit/Casual/chemist_casual.rsi
   - type: Clothing
-    sprite: _Eclipse/Clothing/Uniforms/Jumpsuit/chemist_casual.rsi # _CD/Clothing/Uniforms/Jumpsuit/Casual/chemist_casual.rsi
+    sprite: _CD/Clothing/Uniforms/Jumpsuit/Casual/chemist_casual.rsi
 
 - type: entity
   parent: ClothingUniformBase
