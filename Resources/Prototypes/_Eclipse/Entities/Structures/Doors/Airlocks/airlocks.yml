@@ -1,0 +1,15 @@
+- type: entity
+  parent: AirlockCommand
+  id: AirlockDarkStar
+  suffix: Sector Command
+  components:
+  - type: Sprite
+    sprite: _Eclipse/Structures/Doors/Airlocks/Standard/darkstar.rsi
+
+- type: entity
+  parent: AirlockCommandGlass # see standard
+  id: AirlockDarkStarGlass
+  suffix: Sector Command
+  components:
+  - type: Sprite
+    sprite: _Eclipse/Structures/Doors/Airlocks/Glass/darkstar.rsi
