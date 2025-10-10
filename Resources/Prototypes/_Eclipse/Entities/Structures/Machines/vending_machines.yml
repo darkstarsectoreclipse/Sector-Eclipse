@@ -1,0 +1,27 @@
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineDSDrobe
+  name: DSDrobe
+  description: A one-of-a-kind vending machine for all your dark star aesthetic needs!
+  components:
+  - type: VendingMachine
+    pack: CentDrobeInventory # Change this.
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+  - type: Sprite
+    sprite: _Eclipse/Structures/Machines/VendingMachines/dsdrobe.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"] # make the suits more faded + clear (higher lum / lower contrast)
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#FFFFFF"
+  - type: AccessReader
+    access: [["CentralCommand"]]

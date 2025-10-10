@@ -1,7 +1,7 @@
 - type: gameMap
   id: Wonderland
   mapName: 'Wonderland'
-  mapPath: /Maps/_Umbra/wonderland.yml
+  mapPath: /Maps/_Eclipse/wonderland.yml #/Maps/_Umbra/wonderland.yml
   minPlayers: 0
   maxPlayers: 20
   stations:

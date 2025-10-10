@@ -1,7 +1,7 @@
 - type: gameMap
   id: Iris
   mapName: 'Iris'
-  mapPath: /Maps/_Umbra/iris.yml
+  mapPath: /Maps/_Eclipse/iris.yml #/Maps/_Umbra/iris.yml
   minPlayers: 25
   maxPlayers: 60
   stations:

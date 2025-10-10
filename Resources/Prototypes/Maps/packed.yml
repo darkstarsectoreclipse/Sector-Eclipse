@@ -2,7 +2,7 @@
 - type: gameMap
   id: Packed
   mapName: 'Packed'
-  mapPath: /Maps/packed.yml
+  mapPath: /Maps/_Eclipse/packed.yml #/Maps/packed.yml
   minPlayers: 0 # Umbra
   maxPlayers: 35
   stations:

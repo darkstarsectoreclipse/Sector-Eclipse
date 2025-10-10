@@ -1,7 +1,7 @@
 - type: gameMap
   id: Amber
   mapName: 'Amber'
-  mapPath: /Maps/amber.yml
+  mapPath: /Maps/_Eclipse/amber.yml #/Maps/amber.yml
   minPlayers: 0 # Umbra
   maxPlayers: 60
   stations:

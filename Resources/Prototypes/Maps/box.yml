@@ -1,7 +1,7 @@
 - type: gameMap
   id: Box
   mapName: 'Box Station'
-  mapPath: /Maps/box.yml
+  mapPath: /Maps/_Eclipse/box.yml #/Maps/box.yml
   minPlayers: 50
   stations:
     Boxstation:

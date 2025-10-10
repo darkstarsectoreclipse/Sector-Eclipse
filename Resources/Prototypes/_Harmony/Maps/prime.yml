@@ -1,7 +1,7 @@
 - type: gameMap
   id: Prime
   mapName: Prime
-  mapPath: /Maps/_Harmony/prime.yml
+  mapPath: /Maps/_Eclipse/prime.yml #/Maps/_Harmony/prime.yml
   minPlayers: 25
   maxPlayers: 60
   stations:
